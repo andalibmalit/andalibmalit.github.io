@@ -9,7 +9,7 @@ footer { font-size: 90%; }
     margin: 20px;
   }
   
-  .project {
+  /*.project {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -39,12 +39,12 @@ footer { font-size: 90%; }
     margin-top: 50px;
     border-top: 1px solid #ddd;
     padding-top: 20px;
-  }
+  }*/
   
   /* Responsive: Stack columns on smaller screens */
-  @media (max-width: 768px) {
+  /*@media (max-width: 768px) {
     .project {
       flex-direction: column;
     }
-  }
+  }*/
   
