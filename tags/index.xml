@@ -1,10 +1,47 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Andalib Samandari&#39;s website</title>
-    <link>https://andalibmalit.github.io/tags/</link>
-    <description>Recent content in Tags on Andalib Samandari&#39;s website</description>
+    <title>Andalib&#39;s homepage on Andalib Samandari&#39;s website</title>
+    <link>https://andalibmalit.github.io/</link>
+    <description>Recent content in Andalib&#39;s homepage on Andalib Samandari&#39;s website</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://andalibmalit.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://andalibmalit.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://andalibmalit.github.io/blog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://andalibmalit.github.io/blog/</guid>
+      <description>Coming soon! Posts  &amp;hellip;  Reading list </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://andalibmalit.github.io/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://andalibmalit.github.io/contact/</guid>
+      <description>content/contact.md  title: &amp;ldquo;Contact Me&amp;rdquo; Get in Touch Feel free to reach out to me at andalibmalit@gmail.com or connect via LinkedIn.
+You can also follow my work on GitHub.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://andalibmalit.github.io/research/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://andalibmalit.github.io/research/</guid>
+      <description>A Solar Micro-Grid as a Community Resource Through Market Participation Using Optimal Time-Switching  In collaboration with the West Atlanta Watershed Alliance, we developed a reinforcement learning (RL)-based system to control a solar microgrid and participate in the energy market. We used a Deep Deterministic Policy Gradient (DDPG) agent to find optimal battery and market actions, under local power demand and battery constraints. The video demonstrates a small, physical microgrid and battery managed by our RL agent, simulating peak/off-peak demand patterns and power prices.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://andalibmalit.github.io/resume/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://andalibmalit.github.io/resume/</guid>
+      <description> </description>
+    </item>
+    
   </channel>
 </rss>
