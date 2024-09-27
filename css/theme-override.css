@@ -1,7 +1,4 @@
 footer { font-size: 90%; }
-/* darkmode */
-@media (prefers-color-scheme: dark) {}
-
 .research-projects {
     display: flex;
     flex-direction: column;
@@ -39,7 +36,7 @@ footer { font-size: 90%; }
     margin-top: 50px;
     border-top: 1px solid #ddd;
     padding-top: 20px;
-  }*/
+  }
   
   /* Responsive: Stack columns on smaller screens */
   /*@media (max-width: 768px) {
