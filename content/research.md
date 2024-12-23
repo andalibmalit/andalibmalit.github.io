@@ -7,6 +7,8 @@
       <p>
         In collaboration with the West Atlanta Watershed Alliance, we developed a reinforcement learning (RL)-based system to control a solar microgrid and participate in the energy market. We used a Deep Deterministic Policy Gradient (DDPG) agent to find optimal battery and market actions, under local power demand and battery constraints. The video demonstrates a small, physical microgrid and battery managed by our RL agent, simulating peak/off-peak demand patterns and power prices. The agent autonomously switches between battery and grid usage, optimizing both power delivery and profitability while ensuring local availability.
       </p>
+      <a href="
+      https://www.microsoft.com/en-us/research/blog/ai-powered-microgrids-facilitate-energy-resilience-and-equity-in-regional-communities/" target="_blank">View Blog Post <br></a>
       <a href="https://drive.google.com/file/d/1gsuASH-uvSGmMIhlUZl4iiQPdnVaG4a2/view?usp=sharing" target="_blank">View Slide Presentation</a>
     </div>
     <div class="project-media">

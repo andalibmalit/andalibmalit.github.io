@@ -38,13 +38,6 @@ weight = 1
 name = "Blog"
 url = "/blog/"
 weight = 2
-[[menu.main]]
-name = "Tags"
-url = "/tags/"
-weight = 2
-[[menu.feed]]
-name = "Subscribe"
-url = "/index.xml"
 
 [params]
 custom_css = ["css/theme-override.css"]
