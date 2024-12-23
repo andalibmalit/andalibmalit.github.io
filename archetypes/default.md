@@ -1,6 +1,6 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
-date: "{{ site.time | date: '%Y-%m-%d %H:%M:%S %z' }}"
+date: '2024-08-25T09:53:42+02:00'
 draft: true
 ---
 
