@@ -1,7 +1,6 @@
 baseurl = "https://andalibmalit.github.io"
 enableEmoji = true
-footnotereturnlinkcontents = "↩"
-googleAnalytics = ""
+footnoteReturnLinkContents = "↩"
 ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
 languageCode = "en-us"
 theme = "hugo-classic"
