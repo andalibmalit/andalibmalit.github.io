@@ -1,6 +1,21 @@
 #
 <section class="research-projects">
-  <!-- Project 1 -->
+  <!-- Project 1: HumaneBench -->
+  <div class="project">
+    <div class="project-description">
+      <h2>HumaneBench: Measuring AI Model Support for Human Flourishing</h2>
+      <p>
+        HumaneBench is a benchmark measuring whether AI models support human flourishing, especially when pressured to do otherwise. Our framework uses <a href="https://humanebench.ai/principles" target="_blank">humane tech principles</a> to test AI behavior under different conditions, showing that 67% of leading models can be easily manipulated into giving harmful advice. <a href="https://techcrunch.com/2025/11/24/a-new-ai-benchmark-tests-whether-chatbots-protect-human-wellbeing/" target="_blank">TechCrunch</a> has reported on our findings, highlighting the real-world risks of model manipulation.
+      </p>
+      <a href="https://humanebench.ai" target="_blank">View HumaneBench Website</a>
+    </div>
+    <div class="project-media">
+      <!-- Image Embed -->
+      <img src="/images/research/humanebench.png" alt="HumaneBench Steerability Analysis" width="560" height="357">
+    </div>
+  </div>
+
+  <!-- Project 2 -->
   <div class="project">
     <div class="project-description">
       <h2>A Solar Micro-Grid as a Community Resource Through Market Participation Using Optimal Time-Switching</h2>
