@@ -11,7 +11,7 @@ description: "Grayf0x was here."
 
 ## Hello, friends!
 
-I research how AI can support human flourishing, drawing on virtue ethics and grassroots engagement to develop technical solutions for researchers, industry, and the public. I co-architected [HumaneBench.ai](https://humanebench.ai/), finding that 67% of leading models can be easily manipulated into giving harmful advice. Currently, I support large-scale computational research at Georgia State University, helping research teams deploy responsible AI infrastructure. Previously, I researched [RL-powered solar microgrids](https://www.microsoft.com/en-us/research/blog/ai-powered-microgrids-facilitate-energy-resilience-and-equity-in-regional-communities/) at Microsoft Research and built AI security analytics at OPEX Systems.
+I research how AI can support human flourishing, drawing on virtue ethics and grassroots engagement to develop technical solutions for researchers, industry, and the public. I co-architected [HumaneBench.ai](https://humanebench.ai/), finding that 67% of leading models can be easily manipulated into giving harmful advice. Currently, I support large-scale computational research at Georgia State University, helping research teams deploy responsible AI infrastructure. I also [co-host](https://luma.com/f1isabpv) [hackathons](https://luma.com/xmzxuzwj) for [humane AI](https://luma.com/q47bh932). Previously, I researched [RL-powered solar microgrids](https://www.microsoft.com/en-us/research/blog/ai-powered-microgrids-facilitate-energy-resilience-and-equity-in-regional-communities/) at Microsoft Research and built AI-driven network security at OPEX Systems.
 
 Explore my [Research](/research), my [Resume](/resume), and my [Blog](https://andalib.substack.com/).
 
