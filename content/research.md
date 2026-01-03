@@ -7,7 +7,7 @@
       <p>
         HumaneBench is a benchmark measuring whether AI models support human flourishing, especially when pressured to do otherwise. Our framework uses <a href="https://humanebench.ai/principles" target="_blank">humane tech principles</a> to test AI behavior under different conditions, showing that 67% of leading models can be easily manipulated into giving harmful advice. <a href="https://techcrunch.com/2025/11/24/a-new-ai-benchmark-tests-whether-chatbots-protect-human-wellbeing/" target="_blank">TechCrunch</a> has reported on our findings, highlighting the real-world risks of model manipulation.
       </p>
-      <a href="https://humanebench.ai" target="_blank">View HumaneBench Website</a>
+      <a href="https://humanebench.ai" target="_blank">View Benchmark</a>
     </div>
     <div class="project-media">
       <!-- Image Embed -->
