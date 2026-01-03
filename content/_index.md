@@ -4,7 +4,7 @@ description: "Grayf0x was here."
 ---
 <img
   id="me"
-  style="float:right;width:164px;height:204px;"
+  style="float:right;width:164px;height:auto;"
   src="/images/me.jpg"
   alt="Andalib's face circa 2023">
 
