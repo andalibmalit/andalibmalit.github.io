@@ -1,11 +1,10 @@
-#
 <section class="research-projects">
   <!-- Project 1: HumaneBench -->
   <div class="project">
     <div class="project-description">
       <h2>HumaneBench: Measuring AI Model Support for Human Flourishing</h2>
       <p>
-        HumaneBench is a benchmark measuring whether AI models support human flourishing, especially when pressured to do otherwise. Our framework uses <a href="https://humanebench.ai/principles" target="_blank">humane tech principles</a> to test AI behavior under different conditions, showing that 67% of leading models can be easily manipulated into giving harmful advice. <a href="https://techcrunch.com/2025/11/24/a-new-ai-benchmark-tests-whether-chatbots-protect-human-wellbeing/" target="_blank">TechCrunch</a> has reported on our findings, highlighting the real-world risks of model manipulation.
+        HumaneBench is a benchmark measuring whether AI models support human flourishing, especially when pressured to do otherwise. Our framework uses <a href="https://humanebench.ai/principles" target="_blank">humane tech principles</a> to test AI behavior under different conditions, showing that 67% of leading models can be easily manipulated into giving harmful advice. Our evaluations have been adopted by [Storytell.ai](https://storytell.ai/) and integrated into the [certifiedhumane.ai](https://certifiedhumane.ai/) certification standard. <a href="https://techcrunch.com/2025/11/24/a-new-ai-benchmark-tests-whether-chatbots-protect-human-wellbeing/" target="_blank">TechCrunch</a> has reported on our findings, highlighting the real-world risks of model manipulation. We've also co-organized two hackathons bringing together 50+ technologists and researchers to advance humane AI evaluation frameworks.
       </p>
       <a href="https://humanebench.ai" target="_blank">View Benchmark</a>
     </div>
@@ -20,7 +19,7 @@
     <div class="project-description">
       <h2>A Solar Micro-Grid as a Community Resource Through Market Participation Using Optimal Time-Switching</h2>
       <p>
-        In collaboration with the West Atlanta Watershed Alliance, we developed a reinforcement learning (RL)-based system to control a solar microgrid and participate in the energy market. We used a Deep Deterministic Policy Gradient (DDPG) agent to find optimal battery and market actions, under local power demand and battery constraints. The video demonstrates a small, physical microgrid and battery managed by our RL agent, simulating peak/off-peak demand patterns and power prices. The agent autonomously switches between battery and grid usage, optimizing both power delivery and profitability while ensuring local availability.
+        In collaboration with the grassroots West Atlanta Watershed Alliance, we developed a reinforcement learning (RL)-based system to control a solar microgrid and participate in the energy market. We used a Deep Deterministic Policy Gradient (DDPG) agent to find optimal battery and market actions, under local power demand and battery constraints. The video demonstrates a small, physical microgrid and battery managed by our RL agent, simulating peak/off-peak demand patterns and power prices. The agent autonomously switches between battery and grid usage, optimizing both power delivery and profitability while ensuring local availability.
       </p>
       <a href="
       https://www.microsoft.com/en-us/research/blog/ai-powered-microgrids-facilitate-energy-resilience-and-equity-in-regional-communities/" target="_blank">View Blog Post <br></a>
