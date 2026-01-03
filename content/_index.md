@@ -11,4 +11,4 @@ description: "Grayf0x was here."
 
 ## Hello, friends!
 
-Explore my [Research](/research), my [Resume](/resume), and my [Blog](/blog).
+Explore my [Research](/research), my [Resume](/resume), and my [Blog](https://andalib.substack.com/).
