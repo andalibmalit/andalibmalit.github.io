@@ -1,4 +1,8 @@
 footer { font-size: 90%; }
+footer a {
+  display: inline-block;
+  margin: 0 8px;
+}
 /* darkmode */
 @media (prefers-color-scheme: dark) {}
 
