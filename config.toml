@@ -44,7 +44,7 @@ description = "AI researcher focusing on reinforcement learning and AI ethics."
 githubURL = "https://github.com/andalibmalit"
 linkedinURL = "https://linkedin.com/in/andalibsamandari"
 email = "andalibmalit@gmail.com"
-footer = "[<img src=\"/images/github.svg\" style=\"width:25px;height:25px;\">](https://github.com/andalibmalit)[<img src=\"/images/gmail.svg\" style=\"width:25px;height:25px;\">](mailto:andalibmalit@gmail.com)[<img src=\"/images/X_logo_2023.svg\" style=\"width:25px;height:25px;\">](https://x.com/andalibmalit)[<img src=\"/images/Linkedin_icon.svg\" style=\"width:25px;height:25px;\">](https://linkedin.com/in/andalibsamandari)"
+footer = "[<img src=\"/images/github.svg\" style=\"width:25px;height:25px;\">](https://github.com/andalibmalit)[<img src=\"/images/gmail.svg\" style=\"width:25px;height:25px;\">](mailto:andalibmalit@gmail.com)[<img src=\"/images/Linkedin_icon.svg\" style=\"width:25px;height:25px;\">](https://linkedin.com/in/andalibsamandari)"
 
 [params.seo]
 description = "AI researcher website"
