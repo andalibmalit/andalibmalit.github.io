@@ -11,7 +11,7 @@ description: "Grayf0x was here."
 
 ## Hello, friends!
 
-I research AI safety, focusing on whether AI supports or undermines human flourishing. I co-founded [Building Humane Technology](https://www.buildinghumanetech.com/) and built [HumaneBench.ai](https://humanebench.ai/), finding that 67% of leading models can be manipulated into giving harmful advice through adversarial prompting. I've built evaluation infrastructure that organizations actually adopt—from HITRUST certification unlocking millions in revenue to AI-powered cybersecurity to HPC benchmarking and optimization serving 75M CPU hours annually. 
+I research AI safety, focusing on whether AI supports or undermines human flourishing. I co-architected [HumaneBench.ai](https://humanebench.ai/), finding that 67% of leading models can be manipulated into giving harmful advice through adversarial prompting. I've built evaluation infrastructure that organizations actually adopt—from HITRUST certification unlocking millions in revenue to AI-powered cybersecurity to HPC benchmarking and optimization serving 75M CPU hours annually. 
 
 Currently, I support large-scale computational research at Georgia State University, helping research teams deploy responsible AI infrastructure. I also [organize](https://luma.com/f1isabpv) [hackathons](https://luma.com/q47bh932) and [community events](https://luma.com/xmzxuzwj) advancing humane AI development. 
 
