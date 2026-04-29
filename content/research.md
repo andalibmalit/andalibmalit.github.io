@@ -46,7 +46,17 @@
     </div>
   </div>
 
-  <!-- Project 4: PCMCI causal inference on social-media data -->
+  <!-- Project 4: NIBRS multiple imputation -->
+  <div class="project">
+    <div class="project-description">
+      <h2>Multiple imputation at HPC scale: missing-demographics inference on a decade of NIBRS</h2>
+      <p>
+        In support of GSU criminal-justice research, I parallelized a multiple-imputation-with-bootstrapping pipeline over ~10 years of FBI NIBRS data (~10–12M incidents per year, 2015–2023) — translating a Stata workflow that would have taken 6+ weeks on a workstation into a Python pipeline that runs end-to-end in under 2 days across ~100 concurrent SLURM jobs, with over a billion record-level operations and ~50× speedup on imputation generation alone. The work involved refactoring the imputation procedure into parallel-safe stages, building a robust merge step over the 50 imputed datasets and the original incident files, and distributing the resulting ~500 GB to collaborators nationwide via S3. The pipeline enables principled inference about missing offender demographics — race, ethnicity, age, drug involvement — that would otherwise be dropped via listwise deletion, and is the methodological backbone for two upcoming publications.
+      </p>
+    </div>
+  </div>
+
+  <!-- Project 5: PCMCI causal inference on social-media data -->
   <div class="project">
     <div class="project-description">
       <h2>Causal inference on multimodal social-media data</h2>
@@ -60,7 +70,7 @@
     </div>
   </div>
 
-  <!-- Project 5: Agent-based modeling -->
+  <!-- Project 6: Agent-based modeling -->
   <div class="project">
     <div class="project-description">
       <h2>Agent-based modeling of firearm acquisition trends</h2>
@@ -74,7 +84,7 @@
     </div>
   </div>
 
-  <!-- Project 6: Predator–prey + parasite (REU) -->
+  <!-- Project 7: Predator–prey + parasite (REU) -->
   <div class="project">
     <div class="project-description">
       <h2>Predator–prey dynamics with a multi-species parasite</h2>
