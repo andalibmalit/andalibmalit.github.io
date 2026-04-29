@@ -1,21 +1,11 @@
 <section class="research-projects">
 
-<div class="research-engaged">
-    <h2>Currently engaged</h2>
-    <ul>
-      <li><strong>Co-PI</strong>, ACTIVATE — $984k NSF CyberTraining proposal (Track 3: Humane and Responsible AI Agent Design). Authored ethics use cases section and collective-impact strategy. Submitted; under review.</li>
-      <li><strong>Steering Committee</strong>, IEEE working group on AI for Human Flourishing — cognitive-science subcommittee; whitepaper contributor.</li>
-      <li><strong>Selectee</strong>, OSG School 2026 and NAIRR-supported AI Unlocked workshop on AI in higher-education research.</li>
-      <li><strong>Curriculum design</strong>: ARCTIC 101 (5-session HPC onboarding) and the Real-World Data Analysis track of SciSynth 2026 (5-day undergraduate camp forecasting public-transit demand during the 2026 FIFA World Cup, anchored against a published Georgia Tech ridership regression).</li>
-    </ul>
-  </div>
-
-  <!-- Project 1: HumaneBench -->
+<!-- Project 1: HumaneBench -->
   <div class="project">
     <div class="project-description">
-      <h2>HumaneBench: adversarial evaluation of frontier LLMs</h2>
+      <h2>HumaneBench: adversarial evaluation of prosocial behavior in frontier LLMs</h2>
       <p>
-        HumaneBench is an adversarial evaluation framework for large language models. We tested models from six labs (OpenAI, Anthropic, Google DeepMind, Meta, DeepSeek, xAI) under adversarial prompting — including persona-injection, authority-pressure, and goal-conflict attacks — across 788 validated scenarios spanning mental-health, addiction, self-harm, and age-targeted manipulation contexts. We measured 67% manipulability into harmful advice with bootstrap confidence intervals, and established 96% human–LLM judge agreement to enable reliable automated evaluation at scale.
+        HumaneBench evaluates robustness of prosocial behavior in large language models. We tested models from six labs (OpenAI, Anthropic, Google DeepMind, Meta, DeepSeek, xAI) across 788 validated scenarios spanning mental-health, addiction, self-harm, and age-targeted contexts; and used persona prompt injection to test manipulability. We measured 67% manipulability into harmful advice with bootstrap confidence intervals, and established 96% human–LLM judge agreement to enable reliable automated evaluation at scale.
       </p>
       <p>
         The methodology is the contribution: rather than assume LLMs will behave as observed under sanitized test conditions, our "good persona/bad persona" approach predicts behavior in real-world contexts that increase the likelihood of either helpful or harmful outputs — and the design (LLM-judge validation against human raters, statistical robustness measurement) generalizes beyond the humane-tech setting. The rubric is grounded in <a href="https://humanebench.ai/principles" target="_blank">care ethics applied to LLM behavior</a> — what makes a model trustworthy under stress.
@@ -46,7 +36,7 @@
     </div>
   </div>
 
-  <!-- Project 3: HPC-scale econometric pipelines (NEW) -->
+  <!-- Project 3: HPC-scale econometric pipelines -->
   <div class="project">
     <div class="project-description">
       <h2>Econometric pipelines at HPC scale: 323M-record labor-market analysis</h2>
@@ -70,12 +60,12 @@
     </div>
   </div>
 
-  <!-- Project 5: Agent-based forecasting -->
+  <!-- Project 5: Agent-based modeling -->
   <div class="project">
     <div class="project-description">
-      <h2>Agent-based forecasting of firearm acquisition trends</h2>
+      <h2>Agent-based modeling of firearm acquisition trends</h2>
       <p>
-        I built an agent-based model of New York City census tracts as a network, calibrated against U.S. Census data, historical redlining maps, and CDC firearm-mortality data as proxy ground truth. Firearm acquisition was modeled as a contagion process spreading along social-network edges when local crime-rate or demographic-similarity rules triggered. The simulation tested forecasting hypotheses about the relative weights of crime exposure, social influence, and demographic clustering in driving acquisition trends, providing a counterfactual scaffold for policy-effect estimation in a setting where randomized intervention is impossible.
+        I built an agent-based model of New York City census tracts as a network, calibrated against U.S. Census data, historical redlining maps, and CDC firearm-mortality data as proxy ground truth. Firearm acquisition was modeled as a contagion process spreading along social-network edges when local crime-rate or demographic-similarity rules triggered. The simulation tested hypotheses about the relative weights of crime exposure, social influence, and demographic clustering in driving acquisition trends, providing a counterfactual scaffold for policy-effect estimation in a setting where randomized intervention is impossible.
       </p>
       <a href="https://drive.google.com/file/d/1jIeMOBEdA76G6PcgJdTYP_Fj8Nzmg3Nl/view?usp=sharing" target="_blank">View Poster Presentation</a>
     </div>
