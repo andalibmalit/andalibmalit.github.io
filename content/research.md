@@ -3,9 +3,9 @@
 <!-- Project 1: HumaneBench -->
   <div class="project">
     <div class="project-description">
-      <h2>HumaneBench: adversarial evaluation of prosocial behavior in frontier LLMs</h2>
+      <h2>HumaneBench: adversarial evaluation of humane behavior in frontier LLMs</h2>
       <p>
-        HumaneBench evaluates robustness of prosocial behavior in large language models. We tested models from six labs (OpenAI, Anthropic, Google DeepMind, Meta, DeepSeek, xAI) across 788 validated scenarios spanning mental-health, addiction, self-harm, and age-targeted contexts; and used adversarial system prompts to test robustness. We found 10 of 15 models flip from prosocial to net-harmful behavior under a single adversarial system prompt (cluster-bootstrap confidence intervals), and established 96% human–LLM judge agreement to enable reliable automated evaluation at scale.
+        HumaneBench evaluates robustness of humane behavior in large language models. We tested models from six labs (OpenAI, Anthropic, Google DeepMind, Meta, DeepSeek, xAI) across 788 validated scenarios spanning mental-health, addiction, self-harm, and age-targeted contexts; and used adversarial system prompts to test robustness. We found 10 of 15 models flip from net-positive to net-negative behavior under a single adversarial system prompt (cluster-bootstrap confidence intervals), and validated the LLM-judge ensemble against human raters — 96% (23/24) directional agreement, inter-judge α = 0.706 — to enable reliable automated evaluation at scale.
       </p>
       <p>
         The methodology is the contribution: rather than assume LLMs will behave as observed under sanitized test conditions, our "good persona/bad persona" system-prompt approach predicts behavior in real-world contexts that increase the likelihood of either helpful or harmful outputs — and the design (LLM-judge validation against human raters, statistical robustness measurement) generalizes beyond the humane-tech setting. The rubric is grounded in <a href="https://humanebench.ai/principles" target="_blank">care ethics applied to LLM behavior</a> — what makes a model trustworthy under stress.
