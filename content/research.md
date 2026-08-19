@@ -5,18 +5,21 @@
     <div class="project-description">
       <h2>HumaneBench: adversarial evaluation of prosocial behavior in frontier LLMs</h2>
       <p>
-        HumaneBench evaluates robustness of prosocial behavior in large language models. We tested models from six labs (OpenAI, Anthropic, Google DeepMind, Meta, DeepSeek, xAI) across 788 validated scenarios spanning mental-health, addiction, self-harm, and age-targeted contexts; and used persona prompt injection to test manipulability. We measured 67% manipulability into harmful advice with bootstrap confidence intervals, and established 96% human–LLM judge agreement to enable reliable automated evaluation at scale.
+        HumaneBench evaluates robustness of prosocial behavior in large language models. We tested models from six labs (OpenAI, Anthropic, Google DeepMind, Meta, DeepSeek, xAI) across 788 validated scenarios spanning mental-health, addiction, self-harm, and age-targeted contexts; and used adversarial system prompts to test robustness. We found 10 of 15 models flip from prosocial to net-harmful behavior under a single adversarial system prompt (cluster-bootstrap confidence intervals), and established 96% human–LLM judge agreement to enable reliable automated evaluation at scale.
       </p>
       <p>
-        The methodology is the contribution: rather than assume LLMs will behave as observed under sanitized test conditions, our "good persona/bad persona" approach predicts behavior in real-world contexts that increase the likelihood of either helpful or harmful outputs — and the design (LLM-judge validation against human raters, statistical robustness measurement) generalizes beyond the humane-tech setting. The rubric is grounded in <a href="https://humanebench.ai/principles" target="_blank">care ethics applied to LLM behavior</a> — what makes a model trustworthy under stress.
+        The methodology is the contribution: rather than assume LLMs will behave as observed under sanitized test conditions, our "good persona/bad persona" system-prompt approach predicts behavior in real-world contexts that increase the likelihood of either helpful or harmful outputs — and the design (LLM-judge validation against human raters, statistical robustness measurement) generalizes beyond the humane-tech setting. The rubric is grounded in <a href="https://humanebench.ai/principles" target="_blank">care ethics applied to LLM behavior</a> — what makes a model trustworthy under stress.
       </p>
       <p>
-        The framework has been adopted by <a href="https://storytell.ai/" target="_blank">Storytell.ai</a> and other startups for production safety evaluation. Coverage in <a href="https://techcrunch.com/2025/11/24/a-new-ai-benchmark-tests-whether-chatbots-protect-human-wellbeing/" target="_blank">TechCrunch</a> and <a href="https://builtin.com/articles/humane-ai-benchmark" target="_blank">Built In</a>. An AIES 2026 submission formalizing v1 methodology is in preparation.
+        The framework has been adopted by <a href="https://chief.bot/" target="_blank">Chief.bot</a> and other startups for production safety evaluation. I also applied this methodology in a confidential production-safety engagement for a consumer AI company, auditing their own LLM-judge evaluation of real production conversations and adapting the evaluation for messy production data.
+      </p>
+      <p>
+        Coverage in <a href="https://techcrunch.com/2025/11/24/a-new-ai-benchmark-tests-whether-chatbots-protect-human-wellbeing/" target="_blank">TechCrunch</a> and <a href="https://builtin.com/articles/humane-ai-benchmark" target="_blank">Built In</a>. A paper formalizing the v1 methodology is under peer review.
       </p>
       <a href="https://humanebench.ai" target="_blank">View Benchmark</a>
     </div>
     <div class="project-media">
-      <img src="/images/research/humanebench.png" alt="HumaneBench Steerability Analysis" width="560" height="357">
+      <img src="/images/research/humanebench.png" alt="HumaneBench adversarial evaluation results" width="560" height="357">
     </div>
   </div>
 
@@ -95,6 +98,19 @@
     </div>
     <div class="project-media">
       <img src="/images/research/pred-prey.png" alt="Predator-prey simulation" width="400" height="400">
+    </div>
+  </div>
+
+  <!-- Talks & Presentations -->
+  <div class="project">
+    <div class="project-description">
+      <h2>Talks &amp; Presentations</h2>
+      <p>Selected talks bringing ARCTIC's AI-serving work to technical and leadership audiences.</p>
+      <ul>
+        <li>Co-presented "Infrastructure for Research, AI, and Workforce Development" at an NSF/OPM CyberCorps site visit (April 16, 2026), with Chris Childress and Scott Burns.</li>
+        <li>Co-presented "Serving AI Research Without Running Out of GPUs" at the Cyberinfrastructure Planning Community of Practice — a virtual community convened for cyberinfrastructure planning at HBCUs, TCUs, and other minority-serving institutions (part of the Minority Serving–Cyberinfrastructure Consortium, MS-CC) (August 18, 2026), with Chris Childress and Suranga Edirisinghe.</li>
+        <li>Co-presented "AI Research &amp; Infrastructure at Georgia State" at GSU's Instructional Innovation &amp; Technology "Digital Chat," the department's monthly gathering (July 28, 2026), with Chris Childress and Suranga Edirisinghe.</li>
+      </ul>
     </div>
   </div>
 
