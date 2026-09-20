@@ -2,13 +2,14 @@ baseurl = "https://andalibmalit.github.io"
 locale = "en-us"
 title = "Andalib Samandari"
 theme = "verso"
-footnoteReturnLinkContents = "↩"
 disableKinds = ["taxonomy", "term"]
 
 [outputs]
 home = ["html"]   # sections keep the default HTML+RSS so Writing gets a feed when it exists
 
 [markup]
+  [markup.goldmark.extensions.footnote]
+    backlinkHTML = "↩"   # footnote back-reference glyph (footnoteReturnLinkContents was removed)
   [markup.goldmark.extensions.typographer]
     disable = false   # curly quotes, en/em dashes from Markdown
   [markup.goldmark.parser]

@@ -5,7 +5,7 @@
   <span class="meta">{{ partial "meta.html" $p }}</span>
   <h3 class="title-line">{{ $p.Title }}</h3>
   {{ if eq $tier "selected" -}}
-  <p class="body">{{ $p.RenderString (dict "display" "inline") $p.RawContent }}</p>
+  <div class="body">{{ $p.Content }}</div>
   {{- else -}}
   <p class="body">{{ $p.Params.summary }}</p>
   {{- end }}

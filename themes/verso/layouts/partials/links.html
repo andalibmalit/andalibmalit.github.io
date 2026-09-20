@@ -1,3 +1,9 @@
-{{- with .Params.links -}}
+{{- /* Link line. Skip any item missing a url or label; drop the whole <p> if none
+       remain. Separators use the filtered index, so a skip never leaves a stray dot. */ -}}
+{{- $valid := slice -}}
+{{- range .Params.links -}}
+{{- if and .url .label }}{{ $valid = $valid | append . }}{{ end -}}
+{{- end -}}
+{{- with $valid -}}
 <p class="link meta">{{ range $i, $l := . }}{{ if $i }}<span class="sep" aria-hidden="true"> · </span>{{ end }}<a href="{{ $l.url }}">{{ $l.label }}</a>{{ end }}</p>
 {{- end -}}

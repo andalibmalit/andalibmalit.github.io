@@ -1,6 +1,7 @@
 ---
 title: "Andalib Samandari"
 description: "I like putting real rigor behind things whose importance you can already feel, so the numbers sharpen that feeling but don’t replace it."
+aliases: ["/resume/"]
 news:
   - { outlet: "Tech Can’t Save Us (Literal Humans), S4 Ep43", title: "Scaling the Standards for Ethical AI", url: "https://literalhumans.com/podcast/scaling-the-standards-for-ethical-ai-with-erika-anderson-and-andalib-samandari-founder-and-ai-researcher-of-building-humane-technology/" }
   - { outlet: "Built In", title: "Are Chatbots Acting in Our Best Interest? A New Benchmark Says Maybe Not.", url: "https://builtin.com/articles/humane-ai-benchmark" }

@@ -1,5 +1,6 @@
 {{ define "header" }}<div class="masthead"><h1 class="title">{{ .Title }}</h1></div>{{ end }}
 {{ define "main" }}
+    {{- partial "validate.html" .RegularPages -}}
     {{- $selected := partial "ordered.html" (where .RegularPages "Params.tier" "selected") -}}
     {{- $list := partial "ordered.html" (where .RegularPages "Params.tier" "list") -}}
     {{ with $selected }}

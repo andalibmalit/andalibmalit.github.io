@@ -1,1 +1,13 @@
-<figure><img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" loading="lazy">{{ with .Title }}<figcaption>{{ . }}</figcaption>{{ end }}</figure>
+{{- /* Block images become <figure>; inline images stay a bare <img>. Add width/height
+       only when the source resolves to a page or global resource; otherwise omit them. */ -}}
+{{- $alt := .PlainText -}}
+{{- $img := "" -}}
+{{- if not (urls.Parse .Destination).IsAbs -}}
+  {{- with .Page.Resources.GetMatch .Destination }}{{ $img = . }}{{ end -}}
+  {{- if not $img }}{{ with resources.Get .Destination }}{{ $img = . }}{{ end }}{{ end -}}
+{{- end -}}
+{{- if .IsBlock -}}
+<figure><img src="{{ .Destination | safeURL }}" alt="{{ $alt }}" loading="lazy"{{ with $img }} width="{{ .Width }}" height="{{ .Height }}"{{ end }}>{{ with .Title }}<figcaption>{{ . }}</figcaption>{{ end }}</figure>
+{{- else -}}
+<img src="{{ .Destination | safeURL }}" alt="{{ $alt }}" loading="lazy"{{ with $img }} width="{{ .Width }}" height="{{ .Height }}"{{ end }}>
+{{- end -}}

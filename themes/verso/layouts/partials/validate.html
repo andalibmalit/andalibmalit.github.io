@@ -1,0 +1,16 @@
+{{- /* Validate research entry front matter over the whole collection, so a bad `tier`
+       (which the `where` filters would silently drop) is still caught. tier must be
+       exactly selected|list; year must be a positive integer.
+       errorf does NOT stop template execution, so this partial only reports — it never
+       dereferences the bad value, and the ordering/rendering paths tolerate a 0 from
+       `int` on a missing year. Called once from both Home and Research. */ -}}
+{{- range . -}}
+{{- $tier := .Params.tier -}}
+{{- if not (in (slice "selected" "list") $tier) -}}
+{{- errorf "research entry %s: invalid tier %q (expected selected|list)" .File.Path $tier -}}
+{{- end -}}
+{{- $year := .Params.year -}}
+{{- if or (not $year) (lt (int $year) 1) -}}
+{{- errorf "research entry %s: year must be a positive integer (got %v)" .File.Path $year -}}
+{{- end -}}
+{{- end -}}

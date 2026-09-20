@@ -9,6 +9,15 @@ Requires Hugo **extended** ≥ 0.146.0 (Hugo Pipes: minify, fingerprint, image
 resize). Fonts are self-hosted in `static/fonts/`; the frontispiece is resized
 from `static/images/me.jpg` via a module mount (see below).
 
+## Theme switch
+The nav's right-aligned button flips the theme (`data-theme` on `<html>`,
+remembered in `localStorage`). Its label shows what a click does next, so it
+reads the *opposite* of the current theme: `here comes the sun` while dark is
+showing, `bravo six, going dark` while light is showing. Both strings live in
+`layouts/partials/nav.html`; each carries a visually hidden clarification
+("(switch to light theme)" / "(switch to dark theme)") so the accessible name
+still says what the button does (WCAG 2.5.3 Label in Name).
+
 ## Content schema
 
 ### `content/_index.md` (Home)
@@ -25,33 +34,40 @@ Body: the bio paragraphs (Markdown). The Home "Selected" list is **derived**
 from `content/research/` entries with `tier = "selected"` — do not hand-write it.
 
 ### `content/research/_index.md`
-```toml
-title = "Research"
-description = "…"
-[outputs]
-  home = ["html"]          # section: HTML only, no per-entry pages, no RSS
-[cascade]
-  [cascade.build]
-    render = "never"        # entries are listed, never rendered as their own page
-    list = "local"
+```yaml
+title: Research
+description: "…"
+outputs: [html]              # section: HTML only, no RSS
+cascade:
+  - build:
+      render: never          # entries are listed, never rendered as their own page
+      list: local
+    target:
+      kind: page             # apply the cascade only to the entries, not this page
 ```
+The `target: {kind: page}` matters: without it the cascade also applies to the
+Research list page itself (`kind: section`), so `render: never` would hide the
+Research page too.
 
 ### `content/research/<slug>.md`
-```toml
-title = "Full title (shown as the entry heading)"
-linkTitle = "Short title"   # selected tier only; used in the Home Selected list
-year = 2025                  # integer; sorts descending
-status = "published"         # proposal | in-progress | published
-tier = "selected"            # selected | list
-weight = 1                   # ties within a year sort by weight ascending
-summary = "One line."        # list tier only
-draft = true                 # optional; hidden in production, shown under `hugo server -D`
-[[links]]
-label = "Benchmark website"  # say what the thing is, not the domain
-url = "https://…"
+```yaml
+title: "Full title (shown as the entry heading)"
+linkTitle: "Short title"     # optional; used by the Home "Selected" list
+year: 2025                    # positive integer; sorts descending
+status: published            # proposal | in-progress | published
+tier: selected               # selected | list
+weight: 1                    # ties within a year sort by weight ascending
+summary: "One line."         # list tier; shown in the "Earlier work" list
+draft: true                  # optional; hidden in production, shown under `hugo server -D`
+links:
+  - { label: "Benchmark website", url: "https://…" }   # say what the thing is, not the domain
 ```
-- **selected** entries: the body is one paragraph, rendered inline on Research.
-- **list** entries: leave the body empty; the one-line `summary` is shown.
+- **selected** entries: the body (one or more paragraphs) is rendered inline on
+  Research.
+- **list** entries: the one-line `summary` is shown. The body is optional and is
+  **not** rendered for the list tier; keep it if you like, so the entry can later
+  be promoted to `selected` without rewriting.
+
 Entry anchors (`#slug`) come from the filename.
 
 ## The four design knobs
