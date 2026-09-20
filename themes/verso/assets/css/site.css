@@ -266,7 +266,13 @@ h2.label { font-family: var(--mono); font-size: var(--small); font-weight: 500; 
    stack above their lists as usual. */
 @media (min-width: 1100px) {
   main section { position: relative; }
-  main section > h2.label { position: absolute; top: 0; right: calc(100% + var(--s4)); margin: 0; white-space: nowrap; text-align: right; }
+  /* In the margin the position does the heading's work, so the label drops to regular
+     weight and stays quieter than the page title and the nav's current item. */
+  main section > h2.label { position: absolute; top: 0; right: calc(100% + var(--s4)); margin: 0; white-space: nowrap; text-align: right; font-weight: 400; }
+  /* A page that opens with a labelled section (Research) gets the same hairline the
+     other sections have above them, so a hung label always sits under a rule and the
+     title reads as its own band. Spacing matches .rule: --s5 above in total, --s3 below. */
+  main.page:has(> section:first-child)::before { content: ""; display: block; height: 1px; background: var(--rule); margin: calc(var(--s5) - var(--s4)) 0 var(--s3); }
 }
 
 /* ——— Metadata ——— */
