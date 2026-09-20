@@ -260,6 +260,14 @@ main.page { padding-top: var(--s4); padding-bottom: var(--s5); }
 
 /* ——— Section labels ——— */
 h2.label { font-family: var(--mono); font-size: var(--small); font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: var(--s2); }
+/* Wide screens: hang the labels in the left margin, like marginalia. The text column
+   keeps its width and stays centred; each label sits level with the first line of its
+   section, which is a .meta line in the same face and size. Below 1100px the labels
+   stack above their lists as usual. */
+@media (min-width: 1100px) {
+  main section { position: relative; }
+  main section > h2.label { position: absolute; top: 0; right: calc(100% + var(--s4)); margin: 0; white-space: nowrap; text-align: right; }
+}
 
 /* ——— Metadata ——— */
 .meta { font-family: var(--mono); font-size: var(--small); color: var(--muted); font-variant-numeric: tabular-nums; }
