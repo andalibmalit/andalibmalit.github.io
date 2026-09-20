@@ -1,0 +1,22 @@
+{{- $page := . -}}
+<nav class="nav" aria-label="Site">
+{{- range $i, $m := site.Menus.main -}}
+{{- if $i }}<span class="sep" aria-hidden="true">·</span>{{ end -}}
+{{- /* aria-current="page" only for the item's own page; "true" for descendants (posts). */ -}}
+{{- $cur := "" -}}
+{{- if not (hasPrefix $m.URL "http") -}}
+{{- if eq $m.URL "/" -}}
+{{- if $page.IsHome }}{{ $cur = "page" }}{{ end -}}
+{{- else if eq $page.RelPermalink $m.URL -}}
+{{- $cur = "page" -}}
+{{- else if hasPrefix $page.RelPermalink $m.URL -}}
+{{- $cur = "true" -}}
+{{- end -}}
+{{- end -}}
+<a href="{{ $m.URL }}"{{ with $cur }} aria-current="{{ . }}"{{ end }}>{{ $m.Name }}</a>
+{{- end -}}
+{{- /* Visible label is a phrase; a visually hidden clarification keeps the accessible
+       name containing the visible text and saying what the button does (WCAG 2.5.3).
+       The inactive label span is display:none, so only one name is exposed. */ -}}
+<button type="button" class="switch" id="theme-switch"><span class="to-light">here comes the sun<span class="vh"> (switch to light theme)</span></span><span class="to-dark">bravo six, going dark<span class="vh"> (switch to dark theme)</span></span></button>
+</nav>

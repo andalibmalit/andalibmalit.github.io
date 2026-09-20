@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+{{ partial "head.html" . }}
+<body>
+<a class="skip" href="#main">Skip to content</a>
+{{- /* Emit each knob when its key is set (isset), so a legitimate 0 is kept. */ -}}
+{{- $st := "" -}}
+{{- with site.Params.design -}}
+  {{- if isset . "measure" }}{{ $st = printf "%s--measure:%s;" $st .measure }}{{ end -}}
+  {{- if isset . "body" }}{{ $st = printf "%s--body:%s;" $st .body }}{{ end -}}
+  {{- if isset . "sp" }}{{ $st = printf "%s--sp:%v;" $st .sp }}{{ end -}}
+  {{- if isset . "accenth" }}{{ $st = printf "%s--accent-h:%v;" $st .accenth }}{{ end -}}
+{{- end -}}
+<div class="site{{ block "siteclass" . }}{{ end }}"{{ with $st }} style="{{ . | safeCSS }}"{{ end }}>
+  <header class="page">
+    {{ partial "nav.html" . }}
+    {{ block "header" . }}{{ end }}
+  </header>
+  <main class="page" id="main">{{ block "main" . }}{{ end }}</main>
+  {{ partial "footer.html" . }}
+</div>
+</body>
+</html>

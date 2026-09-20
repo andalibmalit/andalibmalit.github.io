@@ -1,0 +1,10 @@
+{{ define "siteclass" }} post{{ end }}
+{{ define "header" }}
+    <div class="post-head">
+      <span class="meta">{{ .Date.Format "2006" }}</span>
+      <h1 class="title">{{ .Title }}</h1>
+      {{- $sf := .Params.standfirst | default .Description }}{{ with $sf }}
+      <p class="standfirst">{{ . }}</p>{{ end }}
+    </div>
+{{ end }}
+{{ define "main" }}<article class="prose">{{ .Content }}</article>{{ end }}

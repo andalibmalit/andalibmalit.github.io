@@ -1,50 +1,62 @@
 baseurl = "https://andalibmalit.github.io"
-enableEmoji = true
-footnoteReturnLinkContents = "↩"
-ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
-languageCode = "en-us"
-theme = "hugo-classic"
-title = "Andalib Samandari's website"
+locale = "en-us"
+title = "Andalib Samandari"
+theme = "verso"
+disableKinds = ["taxonomy", "term"]
 
-[markup.goldmark.renderer]
-unsafe = true
+[outputs]
+home = ["html"]   # sections keep the default HTML+RSS so Writing gets a feed when it exists
 
-[markup.highlight]
-anchorLineNos = false
-codeFences = true
-guessSyntax = false
-hl_Lines = ""
-lineAnchors = ""
-lineNoStart = 1
-lineNos = false
-lineNumbersInTable = true
-noClasses = true
-style = "monokai"
-tabWidth = 4
+[markup]
+  [markup.goldmark.extensions.footnote]
+    backlinkHTML = "↩"   # footnote back-reference glyph (footnoteReturnLinkContents was removed)
+  [markup.goldmark.extensions.typographer]
+    disable = false   # curly quotes, en/em dashes from Markdown
+  [markup.goldmark.parser]
+    wrapStandAloneImageWithinParagraph = false   # let the image render hook emit a bare <figure>
 
-[permalinks]
-post = "/post/:year/:month/:day/:slug/"
+# Module mounts: also expose static/images to Hugo Pipes (image resizing) while
+# keeping it published as a static file. Re-declaring the assets -> assets mount
+# is required once any mount targets `assets`.
+[module]
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
+  [[module.mounts]]
+    source = "static/images"
+    target = "assets/images"
 
 [[menu.main]]
-name = "Research"
-url = "/research/"
-weight = 1
+  name = "andalib samandari"
+  url = "/"
+  weight = 1
 [[menu.main]]
-name = "Resume"
-url = "/resume/"
-weight = 1
+  name = "research"
+  url = "/research/"
+  weight = 2
 [[menu.main]]
-name = "Blog"
-url = "https://andalib.substack.com/"
-weight = 2
+  name = "writing"
+  url = "https://andalib.substack.com"   # change to "/writing/" when the Writing page is enabled
+  weight = 3
 
 [params]
-custom_css = ["css/theme-override.css"]
-description = "AI researcher and HPC architect — adversarial benchmark design, LLM-judge validation, and statistical analysis under uncertainty."
-githubURL = "https://github.com/andalibmalit"
-linkedinURL = "https://linkedin.com/in/andalibsamandari"
-email = "andalibmalit@gmail.com"
-footer = "[<img src=\"/images/github.svg\" style=\"width:25px;height:25px;\">](https://github.com/andalibmalit)[<img src=\"/images/gmail.svg\" style=\"width:25px;height:25px;\">](mailto:andalibmalit@gmail.com)[<img src=\"/images/Linkedin_icon.svg\" style=\"width:25px;height:25px;\">](https://linkedin.com/in/andalibsamandari)"
+  # Site-wide fallback description (the bio's first sentence).
+  description = "I like putting real rigor behind things whose importance you can already feel, so the numbers sharpen that feeling but don’t replace it."
+  email = "andalibmalit@gmail.com"
+  githubURL = "https://github.com/andalibmalit"
+  linkedinURL = "https://linkedin.com/in/andalibsamandari"
+  cvURL = "https://drive.google.com/file/d/1VHGuIKiEm4Gu111hNG-4N5IZhsnA77-N/view"
+  substackURL = "https://andalib.substack.com"
+  photo = "images/me.jpg"
+  photoAlt = "Andalib Samandari in a meadow below Mount Rainier"
 
-[params.seo]
-description = "Andalib Samandari — AI researcher and HPC architect"
+  [params.design]
+    # Text column width. 66ch is about 78 characters a line in Rasa; the handoff default is
+    # 62ch (about 73). Stay under roughly 70ch or lines get long to read.
+    measure = "66ch"
+    # Body size, fluid: 19px on phones, growing with the viewport to 22px on wide screens
+    # (about 21.5px at 1440). The column is measured in ch, so it widens with the type and
+    # line length stays constant. The handoff default is a fixed "1.1875rem" (19px).
+    body = "clamp(1.1875rem, 0.95rem + 0.45vw, 1.375rem)"
+    sp = 1               # spacing-scale multiplier
+    accentH = 78         # accent hue (ochre); shift to retint prose links

@@ -1,0 +1,29 @@
+{{ define "header" }}<div class="masthead"><h1 class="title">{{ .Title }}</h1></div>{{ end }}
+{{ define "main" }}
+    {{- partial "validate.html" .RegularPages -}}
+    {{- $selected := partial "ordered.html" (where .RegularPages "Params.tier" "selected") -}}
+    {{- $list := partial "ordered.html" (where .RegularPages "Params.tier" "list") -}}
+    {{ with $selected }}
+    <section aria-labelledby="selected">
+      <h2 class="label" id="selected">Selected</h2>
+      <div class="entries">
+        {{- range . }}
+        {{ partial "entry.html" (dict "page" . "tier" "selected") }}
+        {{- end }}
+      </div>
+    </section>
+    {{ end }}
+    {{- if and $selected $list }}
+    <hr class="rule">
+    {{- end }}
+    {{ with $list }}
+    <section aria-labelledby="everything">
+      <h2 class="label" id="everything">Earlier work</h2>
+      <div class="entries compact">
+        {{- range . }}
+        {{ partial "entry.html" (dict "page" . "tier" "list") }}
+        {{- end }}
+      </div>
+    </section>
+    {{ end }}
+{{ end }}
