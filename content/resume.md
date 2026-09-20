@@ -1,5 +1,0 @@
-# Resume
-
-[Download CV (PDF)](https://drive.google.com/file/d/1VHGuIKiEm4Gu111hNG-4N5IZhsnA77-N/view)
-
-<iframe src="https://drive.google.com/file/d/1VHGuIKiEm4Gu111hNG-4N5IZhsnA77-N/preview" style="width: 850px; height: 800px;" allow="autoplay"></iframe>

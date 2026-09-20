@@ -1,29 +1,19 @@
 ---
-title: Andalib's homepage
-description: "AI Researcher and Evaluation Designer — adversarial benchmark design, LLM-judge validation, and statistical analysis under uncertainty."
+title: "Andalib Samandari"
+description: "I like putting real rigor behind things whose importance you can already feel, so the numbers sharpen that feeling but don’t replace it."
+news:
+  - { outlet: "Tech Can’t Save Us (Literal Humans), S4 Ep43", title: "Scaling the Standards for Ethical AI", url: "https://literalhumans.com/podcast/scaling-the-standards-for-ethical-ai-with-erika-anderson-and-andalib-samandari-founder-and-ai-researcher-of-building-humane-technology/" }
+  - { outlet: "Built In", title: "Are Chatbots Acting in Our Best Interest? A New Benchmark Says Maybe Not.", url: "https://builtin.com/articles/humane-ai-benchmark" }
+  - { outlet: "TechCrunch", title: "A New AI Benchmark Tests Whether Chatbots Protect Human Wellbeing", url: "https://techcrunch.com/2025/11/24/a-new-ai-benchmark-tests-whether-chatbots-protect-human-wellbeing/" }
+  - { outlet: "Microsoft Research Blog", title: "AI-Powered Microgrids Facilitate Energy Resilience and Equity in Regional Communities", url: "https://www.microsoft.com/en-us/research/blog/ai-powered-microgrids-facilitate-energy-resilience-and-equity-in-regional-communities/" }
 ---
-<img
-  id="me"
-  style="float:right;width:164px;height:auto;"
-  src="/images/me.jpg"
-  alt="Andalib's face circa 2023">
 
+I like putting real rigor behind things whose importance you can already feel, so the numbers sharpen that feeling but don’t replace it. In practice, that means two kinds of work.
 
-## Hello, friends!
+At Georgia State’s [ARCTIC](https://arctic.gsu.edu/) HPC center, I run AI infrastructure for researchers — building LLM-assisted cluster observability tools; helping scale up researchers’ experiments on our cluster; and leading workshops to democratize ML/AI and other computational methods.
 
-I'm an AI Researcher and Evaluation Designer. I perform empirical research on frontier models — adversarial benchmark design, LLM-judge validation, and statistical analysis under uncertainty.
+My own research is wellbeing evaluation of frontier models: benchmark design, working out what to measure and why, LLM-judge validation. I co-architected and led research on [HumaneBench](https://humanebench.ai), an adversarial evaluation of prosocial behavior in 15 frontier models.
 
-I co-architected and led research on [HumaneBench.ai](https://humanebench.ai/), an adversarial evaluation framework that found 10 of 15 frontier models from six labs (OpenAI, Anthropic, Google DeepMind, Meta, DeepSeek, xAI) flip from net-positive to net-negative behavior under a single adversarial system prompt. It has been adopted by [Chief.bot](https://chief.bot/) and other startups for production safety evaluation, and covered by [TechCrunch](https://techcrunch.com/2025/11/24/a-new-ai-benchmark-tests-whether-chatbots-protect-human-wellbeing/) and [Built In](https://builtin.com/articles/humane-ai-benchmark).
+I’ve also kept a daily meditation practice for years. It shapes my interests in human flourishing, first-person methods, and how felt experience and formal frameworks can inform each other rather than be in tension.
 
-Earlier work at [Microsoft Research](https://www.microsoft.com/en-us/research/blog/ai-powered-microgrids-facilitate-energy-resilience-and-equity-in-regional-communities/) developed a reinforcement-learning agent for autonomous day-ahead energy-market trading — forecasting power demand and prices under microgrid load constraints. At Georgia State, I built agent-based models of firearm acquisition trends and applied PCMCI causal inference to multimodal social-media data.
-
-Currently I'm an AI Architect and Cyberinfrastructure Facilitator at GSU's ARCTIC HPC cluster (75M CPU and 1.2M GPU hours annually). I'm Co-PI on a $984k NSF CyberTraining proposal on humane AI agent design, a Steering Committee member of the IEEE working group on AI for Human Flourishing, and attended OSG School 2026 and the NAIRR-supported AI Unlocked workshop.
-
-Explore my [Research](/research), my [Resume](/resume), and my [Blog](https://andalib.substack.com/).
-
-## News
-
-- [Tech Can't Save Us (Literal Humans), S4 Ep43: Scaling the Standards for Ethical AI](https://literalhumans.com/podcast/scaling-the-standards-for-ethical-ai-with-erika-anderson-and-andalib-samandari-founder-and-ai-researcher-of-building-humane-technology/)
-- [Built In: Are Chatbots Acting in Our Best Interest? A New Benchmark Says Maybe Not.](https://builtin.com/articles/humane-ai-benchmark)
-- [TechCrunch: A New AI Benchmark Tests Whether Chatbots Protect Human Wellbeing](https://techcrunch.com/2025/11/24/a-new-ai-benchmark-tests-whether-chatbots-protect-human-wellbeing/)
-- [Microsoft Research Blog: AI-Powered Microgrids Facilitate Energy Resilience and Equity in Regional Communities](https://www.microsoft.com/en-us/research/blog/ai-powered-microgrids-facilitate-energy-resilience-and-equity-in-regional-communities/)
+A question I recently started asking: can LLMs safely and supportively facilitate first-person exploration of spirituality? As a starting point, I’m exploring whether anti-delusion training also suppresses engagement with reports of spiritual experience.
