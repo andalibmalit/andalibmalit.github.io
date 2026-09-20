@@ -42,7 +42,7 @@ Three pages and a footer. The blog stays on Substack.
 | Home | Stance line; what I do now; practice-to-interests nod; current question with status; 2–3 selected pieces; short News list | The 20-second read. Everything else lives one click away |
 | Research | Selected work (2–3 items, one paragraph and one labelled link each; no images) above a compact list of earlier work | Entry schema in the Research page spec below |
 | Writing | At launch: no Writing page; the nav item links to Substack. Later: the page is enabled with the research-agenda post (why), and the public proposal doc (how) is linked from the Research entry | Hosts long-form pieces that should outlive a newsletter issue |
-| Footer (every page) | CV (PDF), email, GitHub, LinkedIn | CV is a generic version, updated twice a year |
+| Footer (every page) | CV, email, GitHub, LinkedIn | CV is a generic version, updated twice a year |
 
 Nav is one lowercase line: andalib samandari · research · writing, with the light/dark switch at the right end. The name is the home link. No icons.
 
@@ -137,7 +137,7 @@ Rules
 - One serif with real italics and old-style numerals for everything (Newsreader, Literata, Source Serif 4, or Charter); system sans for nav and small labels. Headings barely larger than body, two sizes max.
 - Body 17–19px, line height about 1.5, measure 60–70 characters, left-aligned and ragged right. Space between paragraphs, no indents.
 - Nothing decorative: no hero, cards, boxes, shadows, borders, icons, badges, gradients, blurred shapes, rounded containers, or animation. Hairlines between major sections only.
-- Nav is one line: Andalib Samandari · Research · Writing. Footer on every page is one line of plain links: CV (PDF) · andalibmalit@gmail.com · GitHub · LinkedIn. No copyright line.
+- Nav is one line: Andalib Samandari · Research · Writing. Footer on every page is one line of plain links: CV · andalibmalit@gmail.com · GitHub · LinkedIn. No copyright line.
 - Metadata (years, status labels) smaller, muted, plain text. Status labels: Proposal, In progress, Published.
 - Small square photo placeholder at the top of Home.
 - Use my copy exactly. Don't rewrite, expand, or add taglines, subtitles, CTAs, microcopy, or emoji.

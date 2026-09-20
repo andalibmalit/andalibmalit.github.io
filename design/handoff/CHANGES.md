@@ -18,7 +18,7 @@ Scope for this pass: apply ONLY the items below to the existing Hugo theme. Ever
 - Not shipping. If a Talks section exists in the theme, remove it.
 
 ## 5. Theme switch placement
-- The light/dark switch is the last item in the **nav** line, flush right (`button.switch` inside `.nav`, `margin-left: auto`), styled as a nav link: mono, muted, no underline. Label shows the other mode ("light" when dark is showing). Not in the footer. Footer is exactly: CV (PDF) · andalibmalit@gmail.com · GitHub · LinkedIn.
+- The light/dark switch is the last item in the **nav** line, flush right (`button.switch` inside `.nav`, `margin-left: auto`), styled as a nav link: mono, muted, no underline. Label shows the other mode ("light" when dark is showing). Not in the footer. Footer is exactly: CV · andalibmalit@gmail.com · GitHub · LinkedIn.
 
 ## 6. Favicon (new)
 - Files: `favicon-dark.svg`, `favicon-light.svg`, `apple-touch-icon.png` (in this bundle; copy to `static/`).

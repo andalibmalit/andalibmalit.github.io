@@ -53,7 +53,7 @@ Tweakable knobs (expose as Hugo params if useful): `--measure`, `--body`, `--sp`
 ## Shared parts
 **Nav** (`.nav`, every page): one line in mono, lowercase: `andalib samandari · research · writing`, with the theme switch ("light"/"dark") flush right on the same line. Links are muted, no underline; current page gets `aria-current="page"` and renders in ink. Separators are `<span class="sep" aria-hidden="true">·</span>`.
 
-**Footer** (`footer.page`, every page): hairline, then one mono line: `CV (PDF) · andalibmalit@gmail.com · GitHub · LinkedIn`. Muted, underlined. No copyright line. URLs for CV/GitHub/LinkedIn are still `#` in the reference.
+**Footer** (`footer.page`, every page): hairline, then one mono line: `CV · andalibmalit@gmail.com · GitHub · LinkedIn`. Muted, underlined. No copyright line. URLs for CV/GitHub/LinkedIn are still `#` in the reference.
 
 **Section labels** (`h2.label`): mono, 12.5px, weight 500, uppercase, 0.1em tracking, muted.
 
