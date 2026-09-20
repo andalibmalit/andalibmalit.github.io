@@ -18,3 +18,5 @@ My own research is wellbeing evaluation of frontier models: benchmark design, wo
 I’ve also kept a daily meditation practice for years. It shapes my interests in human & planetary flourishing, first-person methods, and how felt experience and formal frameworks can inform each other rather than be in tension.
 
 A question I recently started asking: can LLMs safely and supportively facilitate first-person exploration of spirituality? As a starting point, I’m exploring whether anti-delusion training also suppresses engagement with reports of spiritual experience.
+
+Reach out any time.
