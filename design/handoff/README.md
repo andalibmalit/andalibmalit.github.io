@@ -129,7 +129,7 @@ Before any of these changes, the built Home, Research, and Writing pages matched
 - **Entry titles and post headings are Rasa 600**, not 500. Reason: 500 read too close to the 400 body text, especially light-on-dark. The 500 font files were swapped for 600, so the payload is unchanged. The mono 500 labels are unchanged.
 
 ### Copy
-- **Theme switch labels** read `here comes the sun` (while dark is showing) and `bravo six, going dark` (while light is showing), not `light` / `dark`. Each carries a visually hidden clarification, "(switch to light theme)" / "(switch to dark theme)", so the accessible name contains the visible text and still says what the button does.
+- **Theme switch labels** read `here comes the sun` (while dark is showing) and `lights out` (while light is showing), not `light` / `dark`. Each carries a visually hidden clarification, "(switch to light theme)" / "(switch to dark theme)", so the accessible name contains the visible text and still says what the button does.
 - **HumaneBench.** The entry title is "HumaneBench: measuring robustness of humane behavior in LLMs" (the same string is the Home link title), and the paragraph was rewritten using only what humanebench.ai states publicly. The Home bio sentence now ends "an adversarial persona-based evaluation of whether 15 frontier models keep behaving humanely under pressure." The reference files still carry the earlier wording.
 - **RL/Microsoft "Slides" link** points to a GitHub-hosted PDF; the Drive link in `research.html` returned 404.
 - **Writing at launch.** There is no Writing page; the nav's `writing` item links to Substack. The list and post layouts exist and switch on when `content/writing/` is added.

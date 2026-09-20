@@ -25,7 +25,7 @@ light `#f8f3e6` / `#0e1218` / `#5f4106`. If a token changes, recompute these.
 The nav's right-aligned button flips the theme (`data-theme` on `<html>`,
 remembered in `localStorage`). Its label shows what a click does next, so it
 reads the *opposite* of the current theme: `here comes the sun` while dark is
-showing, `bravo six, going dark` while light is showing. Both strings live in
+showing, `lights out` while light is showing. Both strings live in
 `layouts/partials/nav.html`; each carries a visually hidden clarification
 ("(switch to light theme)" / "(switch to dark theme)") so the accessible name
 still says what the button does (WCAG 2.5.3 Label in Name).
