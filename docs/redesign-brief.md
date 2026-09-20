@@ -2,6 +2,8 @@
 
 2026-09-19 · @Someone
 
+Status: built and live at [andalibmalit.github.io](https://andalibmalit.github.io) since 2026-09-20. This brief is kept as the record of intent. Where it differs from the site, the repo is the source of truth: `themes/verso/README.md` documents the theme as built, and "Departures from the handoff" in `design/handoff/README.md` lists what changed after the design export and why. "Purpose and audiences" below describes the site this one replaced.
+
 ## Purpose and audiences
 
 The site has two jobs: answer "what question is this person chasing, and can they think?" in 20 seconds, and give a reader one deep thing worth 10 minutes. The current site ([andalibmalit.github.io](https://andalibmalit.github.io)) does neither: the homepage is a résumé in prose, and the research page lists seven projects at equal weight with no dates or hierarchy.
@@ -48,14 +50,14 @@ Content to fix while migrating: the homepage says HumaneBench was adopted by Chi
 
 ## Homepage bio draft
 
-Five paragraphs above the fold, about 190 words. Andalib's final version of Sept 19: the stance, ARCTIC, his own research, the practice, the question.
+Five paragraphs above the fold, about 190 words. Andalib's final version of Sept 19: the stance, ARCTIC, his own research, the practice, the question. The HumaneBench sentence was revised on Sept 20 to name the method and to stay within what humanebench.ai states publicly; the text below is the bio as published, with the ARCTIC link added in Claude Design.
 
 ```markdown
 I like putting real rigor behind things whose importance you can already feel, so the numbers sharpen that feeling but don't replace it. In practice, that means two kinds of work.
 
-At Georgia State's ARCTIC HPC center, I run AI infrastructure for researchers — building LLM-assisted cluster observability tools; helping scale up researchers' experiments on our cluster; and leading workshops to democratize ML/AI and other computational methods.
+At Georgia State's [ARCTIC](https://arctic.gsu.edu/) HPC center, I run AI infrastructure for researchers — building LLM-assisted cluster observability tools; helping scale up researchers' experiments on our cluster; and leading workshops to democratize ML/AI and other computational methods.
 
-My own research is wellbeing evaluation of frontier models: benchmark design, working out what to measure and why, LLM-judge validation. I co-architected and led research on [HumaneBench](https://humanebench.ai/), an adversarial evaluation of prosocial behavior in 15 frontier models.
+My own research is wellbeing evaluation of frontier models: benchmark design, working out what to measure and why, LLM-judge validation. I co-architected and led research on [HumaneBench](https://humanebench.ai), an adversarial persona-based evaluation of whether 15 frontier models keep behaving humanely under pressure.
 
 I've also kept a daily meditation practice for years. It shapes my interests in human flourishing, first-person methods, and how felt experience and formal frameworks can inform each other rather than be in tension.
 
@@ -96,6 +98,8 @@ Selected paragraph for the current question, Andalib's to edit. Add this sentenc
 ## Design direction
 
 Superseded in part by the Claude Design handoff of Sept 20 (design/handoff/README.md in the repo), which is authoritative where it differs from this section. Changes made in Claude Design: dark is the default palette, with the light set behind a plain-text switch in the nav; fonts are Rasa and IBM Plex Mono, self-hosted; the photo is a full-width 5:4 frontispiece under the name, not a small square; the nav's "writing" item links to Substack and there is no Writing page at launch. Later handoff revisions (Sept 20): no images on the Research page; link lines are labelled by type (Paper, Poster, Slides, Video, Blog post) in the metadata style and may hold several links; the NIBRS imputation project replaced the econometric pipelines as the third Selected entry, with a link to the ARCTIC story; the Talks block from the old site was cut as internal. The rules below on space, chrome, measure, and copy still hold.
+
+Changes made during the build, after the export (Sept 20), at Andalib's request: the column is centred rather than left-set; body type scales from 19px on phones to 22px on wide screens with a 66ch measure (about 78 characters a line); from 1100px up the section labels hang in the left margin and Research gets a hairline under its title; entry titles are Rasa 600 rather than 500; the theme switch reads "here comes the sun" / "bravo six, going dark"; the favicon is a ☉ mark (ink ring, ochre dot) that follows the OS colour scheme. Reasons and the CSS-level changes are in "Departures from the handoff" in design/handoff/README.md.
 
 Text-centric, warm, and quiet: the page should feel like a well-set book, not a portfolio. Four traditions inform it, each reduced to what survives on a screen.
 
@@ -174,17 +178,21 @@ Content model for research entries (`content/research/<slug>.md`):
 
 ```markdown
 ---
-title: HumaneBench
-linkTitle: HumaneBench
+title: "HumaneBench: measuring robustness of humane behavior in LLMs"
+linkTitle: "…"       # optional; the title Home's Selected list shows
 year: 2025
 status: published   # proposal | in-progress | published
 tier: selected      # selected | list
-summary: Adversarial evaluation of prosocial behavior in 15 frontier models.
+weight: 1           # breaks ties within a year; order is year descending
+draft: true         # optional; hides the entry on Home and Research in production
+summary: "One line."  # list tier only; shown in Earlier work
 links:
   - { label: Benchmark website, url: https://humanebench.ai }
 ---
-One paragraph, rendered only for selected entries. List entries keep their old paragraph here, unrendered.
+Body, rendered only for selected entries. List entries keep their old paragraph here, unrendered.
 ```
+
+A `status`, `tier`, or `year` that doesn't fit fails the build, so a typo can't silently drop an entry.
 
 Steps:
 
@@ -217,10 +225,21 @@ Calls made in this brief that Andalib may want to reverse:
 - Dark palette by default with a plain-text light/dark switch in the nav. Changed in Claude Design from the brief's original no-dark-mode call; the light set is the brief's original palette.
 - "Actionable" from the MATS wording dropped from the stance line; Andalib's Sept 19 draft ends it at "sharpen that feeling but don't replace it."
 
+Calls made during the build (Sept 20), also reversible; each is one commit:
+
+- Centred column with type that scales up on wide screens, rather than the handoff's left-set column at a fixed 19px. The measure stays under 80 characters; the extra width goes to larger type and the margins, not longer lines.
+- Section labels hung in the left margin on wide screens. A full two-column grid, with the title and photo spanning it, was considered and held back as more change than needed.
+- Rasa 600 for entry titles. 500, the handoff's choice, read too close to the body text, especially in the dark theme.
+- HumaneBench copy limited to what humanebench.ai states publicly. Revisit when more of the work is public: the scenario count, judge validation, and newer findings can come in then.
+- Playful theme switch labels. The one place the site's chrome has a voice; the accessible name still states the action.
+- No `.ico` or PNG favicon fallback. Add one if a browser shows a blank tab icon.
+
 Open decisions:
 
-- [ ] Photo: decided — the Rainier photo as a full-width frontispiece under the name
-- [ ] Selected entries: decided — current question (draft), HumaneBench, NIBRS imputation
-- [ ] Years: filled in (2024, 2023, 2022)
-- [ ] Current-question entry: decided — Hugo draft, hidden until the proposal doc is public
+- [x] Photo: decided — the Rainier photo as a full-width frontispiece under the name
+- [x] Selected entries: decided — current question (draft), HumaneBench, NIBRS imputation
+- [x] Years: filled in (2024, 2023, 2022)
+- [x] Current-question entry: decided — Hugo draft, hidden until the proposal doc is public
 - [ ] Domain: keep `andalibmalit.github.io` or buy a custom domain
+- [ ] Photo weight: the full portrait is downloaded and cropped in the browser; cropping on the server would cut roughly a third of the bytes, at the cost of the `object-position` adjustment
+- [ ] Post typography: no styles yet for bold, `h3`–`h6`, code, or tables; add them when the first post needs them
