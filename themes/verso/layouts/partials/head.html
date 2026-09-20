@@ -18,8 +18,9 @@
 <meta property="og:type" content="{{ $ogtype }}">
 <meta property="og:url" content="{{ .Permalink }}">
 <meta property="og:site_name" content="{{ site.Title }}">
-<link rel="icon" href="{{ "favicon.ico" | relURL }}" sizes="32x32">
-<link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
+{{- /* Favicon follows the OS colour scheme, not data-theme: browsers don't expose that to favicons. */}}
+<link rel="icon" href="{{ "favicon-dark.svg" | relURL }}" type="image/svg+xml">
+<link rel="icon" href="{{ "favicon-light.svg" | relURL }}" type="image/svg+xml" media="(prefers-color-scheme: light)">
 <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
 <link rel="preload" href="{{ "fonts/rasa-latin-400-normal.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="{{ "fonts/ibm-plex-mono-latin-400-normal.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>

@@ -9,6 +9,15 @@ Requires Hugo **extended** ≥ 0.146.0 (Hugo Pipes: minify, fingerprint, image
 resize). Fonts are self-hosted in `static/fonts/`; the frontispiece is resized
 from `static/images/me.jpg` via a module mount (see below).
 
+## Favicon
+The ☉ mark from the design handoff: an ink ring and an ochre dot on the paper
+colour, in the site's own oklch tokens. `static/favicon-dark.svg` is the default;
+`static/favicon-light.svg` takes over when the OS prefers light (a `media`
+attribute on the second `<link rel="icon">`). It follows the OS scheme, not the
+site's `data-theme`, because browsers don't expose that to favicons.
+`static/apple-touch-icon.png` (180px, dark) is for iOS. The files are copied
+verbatim from `design/handoff/`, content-credentials metadata included.
+
 ## Theme switch
 The nav's right-aligned button flips the theme (`data-theme` on `<html>`,
 remembered in `localStorage`). Its label shows what a click does next, so it
