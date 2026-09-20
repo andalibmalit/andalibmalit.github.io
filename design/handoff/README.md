@@ -1,5 +1,7 @@
 # Handoff: Personal site for Andalib Samandari (Hugo theme)
 
+> Updating an existing build? Read `CHANGES.md` first; it lists only what changed since the last handoff.
+
 ## Overview
 A three-page, static, text-centric personal site: Home, Research, Writing (plus a post layout). The feel is a well-set book: quiet, warm, unhurried. No decoration; all hierarchy comes from type, space, and a few hairlines.
 
@@ -99,6 +101,9 @@ At launch there are **zero posts**. The page is: nav, `h1.title` "Writing", `.pr
 - `layouts/writing/list.html`: note + Substack from page content; posts list only if `len (where .Pages "Draft" false) > 0`.
 - `layouts/writing/single.html`: post layout.
 - Statuses and the draft flag drive visibility; `draft: true` on the delusion-mitigation entry.
+
+## Favicon
+☉ mark: ink ring (stroke 5/64), ochre dot (r 6/64), on the paper colour. `favicon-dark.svg` and `favicon-light.svg` follow the OS scheme via the `media` attribute on the second `<link rel="icon">`; `apple-touch-icon.png` (180px, dark) for iOS. Tags in `<head>`, see any page in this bundle.
 
 ## Assets
 Home frontispiece: `static/images/me.jpg` (already in the repo). No images on Research (decided: the frontispiece is the only image on the site). The post layout keeps a 16:9 figure slot (`.ph.wide`) for when a post needs one. Fonts: self-host Rasa and IBM Plex Mono (both SIL OFL; download from Google Fonts or the foundries).
