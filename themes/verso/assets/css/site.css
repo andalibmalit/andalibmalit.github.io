@@ -277,7 +277,9 @@ h2.label { font-family: var(--mono); font-size: var(--small); font-weight: 500; 
 .post figure img { display: block; width: 100%; height: auto; }
 .post .fn, .post .footnotes { font-size: calc(var(--body) * 0.85); color: var(--muted); }
 .post .fn ol, .post .footnotes ol { list-style: decimal; padding-left: 1.5em; display: flex; flex-direction: column; gap: 0.35em; }
-.post .footnotes hr { margin: var(--s5) 0 var(--s3); }
+/* Goldmark nests the hr inside .footnotes; the reference has hr.rule and .fn as separate
+   .prose children, so add the 1em flex gap (at body size) the nesting loses. */
+.post .footnotes hr { margin: var(--s5) 0 calc(var(--s3) + var(--body)); }
 .post sup { line-height: 0; font-variant-numeric: lining-nums; font-size: 0.7em; }
 
 /* ——— Footer ——— */
