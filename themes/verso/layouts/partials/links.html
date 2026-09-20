@@ -1,0 +1,3 @@
+{{- with .Params.links -}}
+<p class="link meta">{{ range $i, $l := . }}{{ if $i }}<span class="sep" aria-hidden="true"> · </span>{{ end }}<a href="{{ $l.url }}">{{ $l.label }}</a>{{ end }}</p>
+{{- end -}}

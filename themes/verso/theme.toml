@@ -1,0 +1,8 @@
+name = "verso"
+license = "MIT"
+min_version = "0.146.0"
+description = "A quiet, text-centric personal-site theme: one serif, one mono, a few hairlines, dark by default."
+homepage = "https://andalibmalit.github.io"
+
+[author]
+name = "Andalib Samandari"

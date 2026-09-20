@@ -1,0 +1,16 @@
+{{- /* Deterministic ordering: year descending, ties broken by weight ascending.
+       Takes a page collection, returns a slice.
+       GroupByParam skips render:never pages, so sort on an explicit composite key:
+       year * 100000 - weight, descending (higher year first; within a year the
+       lower weight yields the higher key, so it sorts first). */ -}}
+{{- $pages := . -}}
+{{- $items := slice -}}
+{{- range $pages -}}
+{{- $key := sub (mul (.Params.year | int) 100000) (.Params.weight | default 0 | int) -}}
+{{- $items = $items | append (dict "page" . "key" $key) -}}
+{{- end -}}
+{{- $ordered := slice -}}
+{{- range (sort $items "key" "desc") -}}
+{{- $ordered = $ordered | append .page -}}
+{{- end -}}
+{{- return $ordered -}}

@@ -1,0 +1,35 @@
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark light">
+{{- /* Title: Home is the bare site title; every other page is "Page · Site". */ -}}
+{{- $t := "" -}}
+{{- if .IsHome }}{{ $t = site.Title }}
+{{- else if eq .Kind "404" }}{{ $t = printf "Page not found · %s" site.Title }}
+{{- else }}{{ $t = printf "%s · %s" .Title site.Title }}{{ end -}}
+<title>{{ $t }}</title>
+{{- $desc := .Description | default site.Params.description -}}
+<meta name="description" content="{{ $desc }}">
+<link rel="canonical" href="{{ .Permalink }}">
+{{- /* Open Graph: article for writing posts, website otherwise; no og:image. */ -}}
+{{- $ogtitle := cond .IsHome site.Title .Title -}}
+{{- $ogtype := cond (and (eq .Section "writing") (eq .Kind "page")) "article" "website" -}}
+<meta property="og:title" content="{{ $ogtitle }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:type" content="{{ $ogtype }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ site.Title }}">
+<link rel="icon" href="{{ "favicon.ico" | relURL }}" sizes="32x32">
+<link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
+<link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
+<link rel="preload" href="{{ "fonts/rasa-latin-400-normal.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ "fonts/ibm-plex-mono-latin-400-normal.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+{{- with site.GetPage "/writing" }}{{ if gt (len .RegularPages) 0 }}{{ with .OutputFormats.Get "rss" }}
+<link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="{{ printf "Writing · %s" site.Title }}">{{ end }}{{ end }}{{ end }}
+<script>
+(function(){try{var t=localStorage.getItem('theme');if(t!=='light'&&t!=='dark')t='dark';document.documentElement.dataset.theme=t;}catch(e){document.documentElement.dataset.theme='dark';}})();
+document.addEventListener('DOMContentLoaded',function(){var b=document.getElementById('theme-switch');if(!b)return;b.addEventListener('click',function(){var h=document.documentElement,n=h.dataset.theme==='light'?'dark':'light';try{localStorage.setItem('theme',n);}catch(e){}h.dataset.theme=n;});});
+</script>
+{{- $css := resources.Get "css/site.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+</head>

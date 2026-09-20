@@ -1,0 +1,16 @@
+{{- $page := . -}}
+<nav class="nav" aria-label="Site">
+{{- range $i, $m := site.Menus.main -}}
+{{- if $i }}<span class="sep" aria-hidden="true">·</span>{{ end -}}
+{{- $cur := false -}}
+{{- if not (hasPrefix $m.URL "http") -}}
+{{- if eq $m.URL "/" -}}
+{{- $cur = $page.IsHome -}}
+{{- else -}}
+{{- $cur = hasPrefix $page.RelPermalink $m.URL -}}
+{{- end -}}
+{{- end -}}
+<a href="{{ $m.URL }}"{{ if $cur }} aria-current="page"{{ end }}>{{ $m.Name }}</a>
+{{- end -}}
+<button type="button" class="switch" id="theme-switch" aria-label="Switch colour theme"><span class="to-light">light</span><span class="to-dark">dark</span></button>
+</nav>

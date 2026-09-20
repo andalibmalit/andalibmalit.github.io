@@ -1,0 +1,9 @@
+{{- /* Entry metadata line: "YEAR · Status". A bad status fails the build. */ -}}
+{{- $status := .Params.status -}}
+{{- $label := "" -}}
+{{- if eq $status "proposal" -}}{{ $label = "Proposal" -}}
+{{- else if eq $status "in-progress" -}}{{ $label = "In progress" -}}
+{{- else if eq $status "published" -}}{{ $label = "Published" -}}
+{{- else -}}{{ errorf "meta.html: invalid status %q in %s (expected proposal|in-progress|published)" $status .File.Path -}}
+{{- end -}}
+{{- printf "%d · %s" (.Params.year | int) $label -}}
