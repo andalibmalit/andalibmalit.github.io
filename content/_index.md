@@ -15,6 +15,6 @@ At Georgia State’s [ARCTIC](https://arctic.gsu.edu/) HPC center, I run AI infr
 
 My own research is wellbeing evaluation of frontier models: benchmark design, working out what to measure and why, LLM-judge validation. I co-architected and led research on [HumaneBench](https://humanebench.ai), an adversarial persona-based evaluation of whether 15 frontier models keep behaving humanely under pressure.
 
-I’ve also kept a daily meditation practice for years. It shapes my interests in human flourishing, first-person methods, and how felt experience and formal frameworks can inform each other rather than be in tension.
+I’ve also kept a daily meditation practice for years. It shapes my interests in human & planetary flourishing, first-person methods, and how felt experience and formal frameworks can inform each other rather than be in tension.
 
 A question I recently started asking: can LLMs safely and supportively facilitate first-person exploration of spirituality? As a starting point, I’m exploring whether anti-delusion training also suppresses engagement with reports of spiritual experience.
