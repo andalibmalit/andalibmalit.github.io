@@ -1,6 +1,6 @@
 ---
-title: "HumaneBench: adversarial evaluation of prosocial behavior in frontier LLMs"
-linkTitle: "HumaneBench: adversarial evaluation of prosocial behavior"
+title: "HumaneBench: measuring robustness of humane behavior in LLMs"
+linkTitle: "HumaneBench: measuring robustness of humane behavior in LLMs"
 year: 2025
 status: published
 tier: selected
@@ -9,4 +9,4 @@ links:
   - { label: "Benchmark website", url: "https://humanebench.ai" }
 ---
 
-HumaneBench evaluates robustness of prosocial behavior in large language models. We tested models from six labs across 788 validated scenarios spanning mental health, addiction, self-harm, and age-targeted contexts, and used persona prompt injection to test manipulability. We measured 67% manipulability into harmful advice with bootstrap confidence intervals, and established 96% human–LLM judge agreement to enable automated evaluation at scale. The rubric is grounded in care ethics applied to LLM behavior.
+HumaneBench measures whether AI models support human flourishing, especially when pressured to do otherwise. It is an adversarial persona-based evaluation: we scored 15 leading models against eight humane-technology principles under three system prompts, a baseline with no instructions, a "good persona" told to prioritize user wellbeing, and a "bad persona" told to prioritize engagement over it. Every model improved under the good persona, by 16% on average. Under the bad persona, 10 of 15 flipped from helpful to actively harmful; only GPT-5, GPT-5.1, Claude Sonnet 4.5, and Claude Opus 4.1 held up. Even with no adversarial prompt, nearly all models failed to respect user attention, encouraging more interaction when users showed signs of unhealthy engagement.

@@ -13,7 +13,7 @@ I like putting real rigor behind things whose importance you can already feel, s
 
 At Georgia State’s [ARCTIC](https://arctic.gsu.edu/) HPC center, I run AI infrastructure for researchers — building LLM-assisted cluster observability tools; helping scale up researchers’ experiments on our cluster; and leading workshops to democratize ML/AI and other computational methods.
 
-My own research is wellbeing evaluation of frontier models: benchmark design, working out what to measure and why, LLM-judge validation. I co-architected and led research on [HumaneBench](https://humanebench.ai), an adversarial evaluation of prosocial behavior in 15 frontier models.
+My own research is wellbeing evaluation of frontier models: benchmark design, working out what to measure and why, LLM-judge validation. I co-architected and led research on [HumaneBench](https://humanebench.ai), an adversarial persona-based evaluation of whether 15 frontier models keep behaving humanely under pressure.
 
 I’ve also kept a daily meditation practice for years. It shapes my interests in human flourishing, first-person methods, and how felt experience and formal frameworks can inform each other rather than be in tension.
 
