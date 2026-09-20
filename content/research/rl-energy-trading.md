@@ -7,7 +7,7 @@ weight: 1
 summary: "DDPG agent for solar-microgrid management; cut predicted power costs by 50%."
 links:
   - { label: "Blog post", url: "https://www.microsoft.com/en-us/research/blog/ai-powered-microgrids-facilitate-energy-resilience-and-equity-in-regional-communities/" }
-  - { label: "Slides", url: "https://drive.google.com/file/d/1gsuASH-uvSGmMIhlUZl4iiQPdnVaG4a2/view" }
+  - { label: "Slides", url: "https://github.com/andalibmalit/microgrid-msft/blob/main/microgrid-control.pdf" }
   - { label: "Video", url: "https://www.youtube.com/watch?v=cUR8pQZTYjw" }
 ---
 
