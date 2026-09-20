@@ -84,6 +84,22 @@ properties on the `.site` wrapper, so the whole page rescales without touching C
 The accent is declared on `.site` (not `:root`) precisely so an `--accent-h`
 override on the wrapper actually recolours links.
 
+The defaults above are the stylesheet's own. Any CSS value works: this site sets
+`body` to a `clamp()` so type grows from 19px on phones to 22px on wide screens.
+The column is measured in `ch`, so it widens with the type and line length holds.
+
+## Layout by width
+One column everywhere, centred from 720px up. Three things happen only on wide
+screens (1100px and up), all in one media query next to `h2.label` in `site.css`:
+- Section labels (`SELECTED`, `NEWS`, `EARLIER WORK`, `POSTS`) hang in the left
+  margin, level with the first metadata line of their section, at regular weight.
+- A page whose main area opens with a labelled section (Research) gets a hairline
+  under the title, so a hung label always sits beneath a rule.
+- The text column itself does not move or change width.
+
+On phones the theme switch wraps onto its own right-aligned row under the nav; at
+350px and below the nav tightens slightly so its first row never breaks.
+
 ## Enabling the Writing page later
 Writing is off at launch (the `writing` menu item points at Substack). To turn
 it on:
