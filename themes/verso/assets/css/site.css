@@ -212,7 +212,9 @@ em, i { font-style: italic; }
 }
 .page { width: 100%; max-width: var(--measure); box-sizing: border-box; padding: 0 var(--pad); }
 @media (min-width: 720px) {
-  .page { margin-left: clamp(48px, 10vw, 180px); padding: 0; }
+  /* Centred column (the handoff set it left, verso-style). The width cap keeps a gutter
+     of --pad each side if a --measure override ever approaches the viewport width. */
+  .page { width: calc(100% - 2 * var(--pad)); margin-left: auto; margin-right: auto; padding: 0; }
 }
 
 /* ——— Nav ——— */

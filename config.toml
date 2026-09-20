@@ -50,7 +50,12 @@ home = ["html"]   # sections keep the default HTML+RSS so Writing gets a feed wh
   photoAlt = "Andalib Samandari in a meadow below Mount Rainier"
 
   [params.design]
-    measure = "62ch"     # text column width; drop to 58ch if paragraphs feel long
-    body = "1.1875rem"   # base body font size (19px)
+    # Text column width. 66ch is about 78 characters a line in Rasa; the handoff default is
+    # 62ch (about 73). Stay under roughly 70ch or lines get long to read.
+    measure = "66ch"
+    # Body size, fluid: 19px on phones, growing with the viewport to 22px on wide screens
+    # (about 21.5px at 1440). The column is measured in ch, so it widens with the type and
+    # line length stays constant. The handoff default is a fixed "1.1875rem" (19px).
+    body = "clamp(1.1875rem, 0.95rem + 0.45vw, 1.375rem)"
     sp = 1               # spacing-scale multiplier
     accentH = 78         # accent hue (ochre); shift to retint prose links
