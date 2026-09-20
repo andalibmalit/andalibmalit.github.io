@@ -11,12 +11,15 @@ from `static/images/me.jpg` via a module mount (see below).
 
 ## Favicon
 The ☉ mark from the design handoff: an ink ring and an ochre dot on the paper
-colour, in the site's own oklch tokens. `static/favicon-dark.svg` is the default;
+colour. `static/favicon-dark.svg` is the default;
 `static/favicon-light.svg` takes over when the OS prefers light (a `media`
 attribute on the second `<link rel="icon">`). It follows the OS scheme, not the
 site's `data-theme`, because browsers don't expose that to favicons.
-`static/apple-touch-icon.png` (180px, dark) is for iOS. The files are copied
-verbatim from `design/handoff/`, content-credentials metadata included.
+`static/apple-touch-icon.png` (180px, dark) is for iOS, copied from
+`design/handoff/`. The two SVGs have the handoff's geometry (ring r 20, stroke 5;
+dot r 6; 64×64 viewBox) but use hex equivalents of the site's oklch tokens, because
+older Safari can't parse `oklch()` in SVG: dark `#1b1812` / `#e2ded2` / `#d1aa6e`,
+light `#f8f3e6` / `#0e1218` / `#5f4106`. If a token changes, recompute these.
 
 ## Theme switch
 The nav's right-aligned button flips the theme (`data-theme` on `<html>`,
@@ -98,16 +101,24 @@ The defaults above are the stylesheet's own. Any CSS value works: this site sets
 The column is measured in `ch`, so it widens with the type and line length holds.
 
 ## Layout by width
-One column everywhere, centred from 720px up. Three things happen only on wide
-screens (1100px and up), all in one media query next to `h2.label` in `site.css`:
-- Section labels (`SELECTED`, `NEWS`, `EARLIER WORK`, `POSTS`) hang in the left
-  margin, level with the first metadata line of their section, at regular weight.
-- A page whose main area opens with a labelled section (Research) gets a hairline
-  under the title, so a hung label always sits beneath a rule.
-- The text column itself does not move or change width.
+One column everywhere, centred from 720px up. On wide screens (1100px and up), in
+one media query next to `h2.label` in `site.css`, section labels (`SELECTED`,
+`NEWS`, `EARLIER WORK`, `POSTS`) hang in the left margin, level with the first
+metadata line of their section, at regular weight. The text column itself does not
+move or change width.
 
-On phones the theme switch wraps onto its own right-aligned row under the nav; at
-350px and below the nav tightens slightly so its first row never breaks.
+At every width, a page whose main area opens with a labelled section (Research)
+gets a hairline under the title, with the same spacing as `.rule`, so a label
+always sits beneath a rule and phone and desktop agree.
+
+At 600px and below the theme switch takes its own right-aligned line under the
+nav (`flex-basis: 100%`, a `--s1` gap above); above 600px it sits flush right on
+the nav line. At 350px and below the nav tightens slightly so its first row never
+breaks.
+
+The RSS link in the footer and the feed `<link>` in the head appear only once a
+non-draft post exists under `content/writing/`. The nav's `writing` item is set by
+hand in `config.toml`; switch it to `/writing/` at the same time.
 
 ## Enabling the Writing page later
 Writing is off at launch (the `writing` menu item points at Substack). To turn

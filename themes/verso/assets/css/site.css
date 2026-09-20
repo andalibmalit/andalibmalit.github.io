@@ -229,8 +229,13 @@ em, i { font-style: italic; }
 .nav a[aria-current] { color: var(--ink); }
 .nav .sep { user-select: none; }
 .nav .switch { margin-left: auto; font: inherit; color: inherit; background: none; border: 0; padding: 8px 0; margin-top: -8px; margin-bottom: -8px; cursor: pointer; white-space: nowrap; }
-/* Tightest phones (≤350px): keep name · research · writing on one row down to 320px.
-   The switch keeps wrapping to its own right-aligned row. Nothing changes above 350px. */
+/* ≤600px: the switch label is too long to share the nav line, so give it its own
+   right-aligned line on purpose rather than letting it wrap where it happens to fall.
+   The -8px top margin is the tap-target padding; adding --s1 leaves a --s1 gap above. */
+@media (max-width: 600px) {
+  .nav .switch { flex-basis: 100%; text-align: right; margin-left: 0; margin-top: calc(var(--s1) - 8px); }
+}
+/* Tightest phones (≤350px): keep name · research · writing on one row down to 320px. */
 @media (max-width: 350px) { .nav { gap: 0 6px; font-size: 0.72rem; } }
 .nav .switch:hover { color: var(--ink); }
 .nav .switch:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
@@ -270,11 +275,11 @@ h2.label { font-family: var(--mono); font-size: var(--small); font-weight: 500; 
   /* In the margin the position does the heading's work, so the label drops to regular
      weight and stays quieter than the page title and the nav's current item. */
   main section > h2.label { position: absolute; top: 0; right: calc(100% + var(--s4)); margin: 0; white-space: nowrap; text-align: right; font-weight: 400; }
-  /* A page that opens with a labelled section (Research) gets the same hairline the
-     other sections have above them, so a hung label always sits under a rule and the
-     title reads as its own band. Spacing matches .rule: --s5 above in total, --s3 below. */
-  main.page:has(> section:first-child)::before { content: ""; display: block; height: 1px; background: var(--rule); margin: calc(var(--s5) - var(--s4)) 0 var(--s3); }
 }
+/* A page that opens with a labelled section (Research) gets the same hairline the other
+   sections have above them, at every width, so the title reads as its own band and a
+   label always sits under a rule. Spacing matches .rule: --s5 above in total, --s3 below. */
+main.page:has(> section:first-child)::before { content: ""; display: block; height: 1px; background: var(--rule); margin: calc(var(--s5) - var(--s4)) 0 var(--s3); }
 
 /* ——— Metadata ——— */
 .meta { font-family: var(--mono); font-size: var(--small); color: var(--muted); font-variant-numeric: tabular-nums; }
@@ -298,7 +303,7 @@ h2.label { font-family: var(--mono); font-size: var(--small); font-weight: 500; 
 /* ——— Placeholders ——— */
 .ph { background: repeating-linear-gradient(135deg, var(--ph-a) 0 3px, var(--ph-b) 3px 8px); display: grid; place-items: center; font-family: var(--mono); font-size: 10px; color: var(--muted); }
 .photo.frontispiece { display: block; width: 100%; height: auto; aspect-ratio: 5 / 4; object-fit: cover; object-position: 50% 62%; margin-top: var(--s3); }
-.photo.frontispiece { filter: brightness(0.88); }
+.photo.frontispiece { filter: brightness(0.92); }
 :root[data-theme="light"] .photo.frontispiece, .site[data-theme="light"] .photo.frontispiece { filter: none; }
 @media (prefers-color-scheme: light) { :root[data-theme="auto"] .photo.frontispiece, .site[data-theme="auto"] .photo.frontispiece { filter: none; } }
 .ph.wide { width: 100%; aspect-ratio: 16 / 9; font-size: var(--small); } /* post figures only */

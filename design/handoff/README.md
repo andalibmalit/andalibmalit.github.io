@@ -122,8 +122,8 @@ Before any of these changes, the built Home, Research, and Writing pages matched
 - **Centred column.** The handoff sets `.page` to the left with `margin-left: clamp(48px, 10vw, 180px)`. The site centres it from 720px up. Reason: on a wide desktop screen the left-set column read as off to one side.
 - **Fluid body size, wider measure.** `--body` is `clamp(1.1875rem, 0.95rem + 0.45vw, 1.375rem)` (19px on phones to 22px on wide screens) and `--measure` is `66ch`, both set from `config.toml`. Reason: use more of a desktop screen without longer lines. The column is measured in `ch`, so it widens with the type and line length holds near 78 characters.
 - **Hanging section labels.** From 1100px up, `h2.label` (SELECTED, NEWS, EARLIER WORK, POSTS) sits in the left margin, right-aligned, level with the first `.meta` line of its section, at weight 400 rather than 500. Below 1100px the labels stack above their lists as designed. Reason: marginalia use the wide margin without touching the text column; in the margin the position does the heading's work, so the label can be quieter.
-- **Header band on Research.** From 1100px up, a page whose `main` opens with a labelled section gets a hairline under the title, with the same spacing as `.rule`. Reason: a hung label 36px under the `h1` competed with it; now every hung label sits beneath a rule, as on Home.
-- **Narrow nav.** The switch label is long (see Copy), so on phones it wraps to its own right-aligned row under the nav. At 350px and below, `.nav` tightens to `gap: 0 6px; font-size: 0.72rem` so `andalib samandari · research · writing` never breaks across rows. The handoff nav needs about 342px on one line and was only checked at 390px.
+- **Header band on Research.** At every width, a page whose `main` opens with a labelled section gets a hairline under the title, with the same spacing as `.rule`. Reason: a hung label 36px under the `h1` competed with it; now every label sits beneath a rule, as on Home, and phone and desktop agree.
+- **Narrow nav.** The switch label is long (see Copy), so at 600px and below it takes its own right-aligned line under the nav (`flex-basis: 100%`, a `--s1` gap above) rather than wrapping where it happens to fall. At 350px and below, `.nav` tightens to `gap: 0 6px; font-size: 0.72rem` so `andalib samandari · research · writing` never breaks across rows. The handoff nav needs about 342px on one line and was only checked at 390px.
 
 ### Type
 - **Entry titles and post headings are Rasa 600**, not 500. Reason: 500 read too close to the 400 body text, especially light-on-dark. The 500 font files were swapped for 600, so the payload is unchanged. The mono 500 labels are unchanged.
@@ -144,9 +144,9 @@ Before any of these changes, the built Home, Research, and Writing pages matched
 - **Print.** The frontispiece dimming is removed and the skip link hidden.
 
 ### Assets
-- **Frontispiece** is served as resized derivatives (600w, 1200w, 1600w via `srcset`) rather than the 1714×2167 original. The CSS crop and `object-position` are as designed.
+- **Frontispiece** is served as resized derivatives (600w, 1200w, 1600w via `srcset`) rather than the 1714×2167 original. The CSS crop and `object-position` are as designed. In the dark theme it is dimmed to `brightness(0.92)` rather than `0.88`.
 - **Fonts** are self-hosted from the `@fontsource` packages, latin and latin-ext subsets with `unicode-range`; the two 400 romans are preloaded.
-- **Favicon** matches this bundle (files copied verbatim). There is no `.ico` or PNG fallback.
+- **Favicon** has this bundle's geometry, but the two SVGs use hex equivalents of the oklch tokens (dark `#1b1812` / `#e2ded2` / `#d1aa6e`, light `#f8f3e6` / `#0e1218` / `#5f4106`) because older Safari can't parse `oklch()` in SVG, and they drop the content-credentials block, which no longer matches an edited file. `apple-touch-icon.png` is copied as delivered. There is no `.ico` or PNG fallback.
 
 ### Not in the handoff, added for the site
 - `/resume/` redirects to Home (the old site had a Resume page).
