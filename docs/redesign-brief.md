@@ -38,11 +38,11 @@ Three pages and a footer. The blog stays on Substack.
 | Page | Contents | Notes |
 | --- | --- | --- |
 | Home | Stance line; what I do now; practice-to-interests nod; current question with status; 2–3 selected pieces; short News list | The 20-second read. Everything else lives one click away |
-| Research | Selected work (2–3 items, one paragraph and one image each) above a compact list of everything else | Entry schema in the Research page spec below |
+| Research | Selected work (2–3 items, one paragraph and one labelled link each; no images) above a compact list of earlier work | Entry schema in the Research page spec below |
 | Writing | At launch: no Writing page; the nav item links to Substack. Later: the page is enabled with the research-agenda post (why), and the public proposal doc (how) is linked from the Research entry | Hosts long-form pieces that should outlive a newsletter issue |
 | Footer (every page) | CV (PDF), email, GitHub, LinkedIn | CV is a generic version, updated twice a year |
 
-Nav is four words: Home, Research, Writing, and the name. No icons in the nav.
+Nav is one lowercase line: andalib samandari · research · writing, with the light/dark switch at the right end. The name is the home link. No icons.
 
 Content to fix while migrating: the homepage says HumaneBench was adopted by Chief.bot, the research page says Storytell.ai; pick the current one. Drop "Andalib's face circa 2023" as alt text and use a recent photo, or no photo.
 
@@ -144,8 +144,8 @@ Latitude
 - Add knobs for measure, type scale, vertical spacing, and accent hue.
 
 Launch state
-- The Writing page launches with a short note and the Substack link only; still build one sample post page for later.
-- The current-question research entry launches with a status and no link.
+- No Writing page at launch; the nav's writing item links to Substack. Still build the post layout for later.
+- The current-question research entry is a Hugo draft at launch, hidden.
 
 Order
 1. Home at phone width, in three directions that all obey the rules but differ in feel: (a) bookish, (b) tighter and more asymmetric, (c) dates and statuses more prominent.
@@ -168,23 +168,22 @@ flowchart LR
   D --> E[GitHub Pages]
 ```
 
-Claude Design can export standalone HTML files and package a design into a bundle for Claude Code ([Anthropic announcement](https://www.anthropic.com/news/claude-design-anthropic-labs)). Claude Code then writes the theme: `baseof.html`, a home layout, a `research` list and single layout, a `writing` list and single layout, and one CSS file.
+Claude Design can export standalone HTML files and package a design into a bundle for Claude Code ([Anthropic announcement](https://www.anthropic.com/news/claude-design-anthropic-labs)). Claude Code then writes the theme: `baseof.html`, a home layout, a `research` list layout (entries render only on the list page, each with an anchor), a `writing` list and single layout (dormant at launch), a 404 page, and one CSS file.
 
 Content model for research entries (`content/research/<slug>.md`):
 
 ```markdown
 ---
 title: HumaneBench
+linkTitle: HumaneBench
 year: 2025
-status: settled   # seedling | growing | settled
-tier: selected    # selected | list
+status: published   # proposal | in-progress | published
+tier: selected      # selected | list
 summary: Adversarial evaluation of prosocial behavior in 15 frontier models.
 links:
-  - { label: Benchmark, url: https://humanebench.ai }
-  - { label: Paper, url: … }
-image: /images/research/humanebench.png
+  - { label: Benchmark website, url: https://humanebench.ai }
 ---
-One paragraph, shown only for selected entries.
+One paragraph, rendered only for selected entries. List entries keep their old paragraph here, unrendered.
 ```
 
 Steps:
@@ -192,10 +191,10 @@ Steps:
 1. Fix the content first: choose the current HumaneBench adopter, fill in years, pick 2–3 selected entries, finalize the bio.
 2. Design in Claude Design with real content; iterate until the phone-width Home page reads well without scrolling past the bio.
 3. Export and hand to Claude Code with this doc; ask for a theme, not a static copy of the export.
-4. Migrate the seven research entries into front matter; delete the Resume page; add the CV PDF to `static/`.
+4. Migrate the eight research entries into front matter; delete the Resume page; point the footer CV link at the Drive PDF.
 5. Check before publishing: line length at 320px and 1440px, link contrast, no external font failures, every research link resolves, Substack link present, `<title>` and description set per page.
 
-Launch order: the site goes live before the agenda post and the proposal doc exist. The Writing page launches with a short note and the Substack link; the current-question entry launches with a status and no link. Add both links when they're published. The agenda post recruits collaborators; the proposal doc, published as a readable version rather than the working doc, gives them something concrete to react to and doubles as a timestamped pre-registration.
+Launch order: the site goes live before the agenda post and the proposal doc exist. There is no Writing page at launch; the nav's writing item links to Substack, and the Writing layouts stay dormant until a post is added. The current-question entry is a Hugo draft, hidden from production builds on Home and Research. Enable the page and un-draft the entry when they're published. The agenda post recruits collaborators; the proposal doc, published as a readable version rather than the working doc, gives them something concrete to react to and doubles as a timestamped pre-registration.
 
 Starting in Claude Design:
 
@@ -205,7 +204,7 @@ Starting in Claude Design:
 - [ ] Hand off with the Claude Code bundle, not the raw HTML export
 - [ ] In the repo, on a branch: add this brief as `docs/redesign-brief.md`; ask for a Hugo theme, not static pages; preview with `hugo server`
 
-Avoid: a JavaScript framework, a theme with a dark-mode toggle, and hand-maintained HTML pages. The research page as data is the maintenance win.
+Avoid: a JavaScript framework and hand-maintained HTML pages. The only script on the site is the theme switch. The research page as data is the maintenance win.
 
 ## Discretionary calls and open decisions
 
@@ -215,13 +214,13 @@ Calls made in this brief that Andalib may want to reverse:
 - Three plain status labels (Proposal, In progress, Published). Garden labels were tried first and dropped as pretentious; a longer scale felt like ceremony for eight entries.
 - The practice nod placed third in the bio, after the work. Placing it first was considered and rejected: the 20-second read should open on the question and the work.
 - A Writing page hosted on the site rather than pointing everything to Substack. Reason: the program-framing post should outlive a newsletter issue and be linkable from the research page.
-- No dark mode in v1. It doubles the palette decisions and the current site's problem is warmth, not brightness.
+- Dark palette by default with a plain-text light/dark switch in the nav. Changed in Claude Design from the brief's original no-dark-mode call; the light set is the brief's original palette.
 - "Actionable" from the MATS wording dropped from the stance line; Andalib's Sept 19 draft ends it at "sharpen that feeling but don't replace it."
 
 Open decisions:
 
-- [ ] Photo: keep a recent one, or none
-- [ ] Which 2–3 research entries are Selected (proposed: current question, HumaneBench, econometric pipelines)
-- [ ] Years for the three undated entries
-- [ ] Whether the Research entry for the current question ships with no link at launch, or waits for the proposal doc
+- [ ] Photo: decided — the Rainier photo as a full-width frontispiece under the name
+- [ ] Selected entries: decided — current question (draft), HumaneBench, NIBRS imputation
+- [ ] Years: filled in (2024, 2023, 2022)
+- [ ] Current-question entry: decided — Hugo draft, hidden until the proposal doc is public
 - [ ] Domain: keep `andalibmalit.github.io` or buy a custom domain
