@@ -19,4 +19,4 @@ I’ve also kept a daily meditation practice for years. It shapes my interests i
 
 A question I recently started asking: can LLMs safely and supportively facilitate first-person exploration of spirituality? As a starting point, I’m exploring whether anti-delusion training also suppresses engagement with reports of spiritual experience.
 
-Reach out any time.
+Feel free to reach me at my email or LinkedIn below.
