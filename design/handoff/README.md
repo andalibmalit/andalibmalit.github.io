@@ -2,6 +2,8 @@
 
 > Updating an existing build? Read `CHANGES.md` first; it lists only what changed since the last handoff.
 
+> **This bundle is a snapshot** of the Claude Design export (last updated 2026-09-20), kept as delivered. The live site departs from it in a few deliberate ways; they are listed under "Departures from the handoff" at the end of this file. Where the two differ, the repo (`themes/verso/`, `content/`, `config.toml`) is the source of truth, and `themes/verso/README.md` documents the theme as built.
+
 ## Overview
 A three-page, static, text-centric personal site: Home, Research, Writing (plus a post layout). The feel is a well-set book: quiet, warm, unhurried. No decoration; all hierarchy comes from type, space, and a few hairlines.
 
@@ -110,3 +112,43 @@ Home frontispiece: `static/images/me.jpg` (already in the repo). No images on Re
 
 ## Screenshots
 `screenshots/` holds desktop captures of each page at 2×: `home.png`, `research.png`, `writing.png` (with the sample entry visible), `writing-post.png`. These are the visual target; the HTML files are the structural one.
+
+## Departures from the handoff
+Added after the build (site live 2026-09-20). Everything above this section describes the design as exported; this section lists where the built site differs and why. The HTML, CSS, and screenshots in this folder were left as delivered, so they show the design before these changes. The screenshots are gitignored and local only.
+
+Before any of these changes, the built Home, Research, and Writing pages matched the reference renders at 390px and 1440px in both themes: identical page heights and per-element geometry.
+
+### Layout
+- **Centred column.** The handoff sets `.page` to the left with `margin-left: clamp(48px, 10vw, 180px)`. The site centres it from 720px up. Reason: on a wide desktop screen the left-set column read as off to one side.
+- **Fluid body size, wider measure.** `--body` is `clamp(1.1875rem, 0.95rem + 0.45vw, 1.375rem)` (19px on phones to 22px on wide screens) and `--measure` is `66ch`, both set from `config.toml`. Reason: use more of a desktop screen without longer lines. The column is measured in `ch`, so it widens with the type and line length holds near 78 characters.
+- **Hanging section labels.** From 1100px up, `h2.label` (SELECTED, NEWS, EARLIER WORK, POSTS) sits in the left margin, right-aligned, level with the first `.meta` line of its section, at weight 400 rather than 500. Below 1100px the labels stack above their lists as designed. Reason: marginalia use the wide margin without touching the text column; in the margin the position does the heading's work, so the label can be quieter.
+- **Header band on Research.** From 1100px up, a page whose `main` opens with a labelled section gets a hairline under the title, with the same spacing as `.rule`. Reason: a hung label 36px under the `h1` competed with it; now every hung label sits beneath a rule, as on Home.
+- **Narrow nav.** The switch label is long (see Copy), so on phones it wraps to its own right-aligned row under the nav. At 350px and below, `.nav` tightens to `gap: 0 6px; font-size: 0.72rem` so `andalib samandari · research · writing` never breaks across rows. The handoff nav needs about 342px on one line and was only checked at 390px.
+
+### Type
+- **Entry titles and post headings are Rasa 600**, not 500. Reason: 500 read too close to the 400 body text, especially light-on-dark. The 500 font files were swapped for 600, so the payload is unchanged. The mono 500 labels are unchanged.
+
+### Copy
+- **Theme switch labels** read `here comes the sun` (while dark is showing) and `bravo six, going dark` (while light is showing), not `light` / `dark`. Each carries a visually hidden clarification, "(switch to light theme)" / "(switch to dark theme)", so the accessible name contains the visible text and still says what the button does.
+- **HumaneBench.** The entry title is "HumaneBench: measuring robustness of humane behavior in LLMs" (the same string is the Home link title), and the paragraph was rewritten using only what humanebench.ai states publicly. The Home bio sentence now ends "an adversarial persona-based evaluation of whether 15 frontier models keep behaving humanely under pressure." The reference files still carry the earlier wording.
+- **RL/Microsoft "Slides" link** points to a GitHub-hosted PDF; the Drive link in `research.html` returned 404.
+- **Writing at launch.** There is no Writing page; the nav's `writing` item links to Substack. The list and post layouts exist and switch on when `content/writing/` is added.
+
+### CSS structure
+- **`--accent` lives on `.site`.** "Where variables live matters" above says so, but `site.css` as exported declares it on `:root`, where `var(--accent-h)` resolves before a wrapper override, so the `--accent-h` knob had no effect. The theme declares `--accent` on `.site`, with the light, auto, and print variants scoped the same way.
+- **`color-scheme` follows `data-theme`**, not the OS: `dark` by default, `light` under `[data-theme="light"]`, and the static `<meta name="color-scheme">` was dropped. Reason: a light-OS visitor on the dark site otherwise gets light scrollbars and form controls.
+- **Theme script in `<head>`** sets `data-theme` before the stylesheet loads, as this README asks. `<html>` ships without a static `data-theme`, the switch label is toggled by CSS rather than `textContent`, and the button is hidden when JavaScript never ran.
+- **Skip link** is a `.skip` class that appears on `:focus`; the reference's inline `onfocus`/`onblur` handlers were dropped so the theme script is the only JavaScript.
+- **Rendered Markdown.** Lists inside `.prose` get their markers back (the global reset removes them); multi-paragraph list items and blockquotes get 1em gaps; Goldmark's `.footnotes` block is styled like `.fn`, with the 1em gap its nested `<hr>` would otherwise lose; block images render as `<figure>`.
+- **Selected entry bodies** render as `div.body` wrapping the Markdown's own `<p>`, not `p.body`, so a body with more than one paragraph stays valid HTML. One paragraph looks the same.
+- **Print.** The frontispiece dimming is removed and the skip link hidden.
+
+### Assets
+- **Frontispiece** is served as resized derivatives (600w, 1200w, 1600w via `srcset`) rather than the 1714×2167 original. The CSS crop and `object-position` are as designed.
+- **Fonts** are self-hosted from the `@fontsource` packages, latin and latin-ext subsets with `unicode-range`; the two 400 romans are preloaded.
+- **Favicon** matches this bundle (files copied verbatim). There is no `.ico` or PNG fallback.
+
+### Not in the handoff, added for the site
+- `/resume/` redirects to Home (the old site had a Resume page).
+- A bad `status`, `tier`, or `year` in a research entry fails the build.
+- Per-entry research pages are not rendered; entries exist only on the list page, each with an anchor from its filename.
