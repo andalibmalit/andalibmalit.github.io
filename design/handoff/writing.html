@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark light">
+<title>Writing · Andalib Samandari</title>
+<link href="https://fonts.googleapis.com/css2?family=Rasa:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<a href="#main" style="position:absolute;left:-999px;top:0;background:var(--paper);padding:8px 12px;font-family:var(--mono);font-size:var(--small)" onfocus="this.style.left='12px'" onblur="this.style.left='-999px'">Skip to content</a>
+
+<div class="site">
+  <header class="page">
+    <nav class="nav" aria-label="Site"><a href="index.html">andalib samandari</a><span class="sep" aria-hidden="true">·</span><a href="research.html">research</a><span class="sep" aria-hidden="true">·</span><a href="writing.html" aria-current="page">writing</a><button type="button" class="switch" id="theme-switch">light</button></nav>
+    <div class="masthead"><h1 class="title">Writing</h1></div>
+  </header>
+  <main class="page" id="main">
+    <div class="prose">
+      <p>[Two-line note — your copy goes here. Nothing on this page is published yet, so the list below stays empty until the first post.]</p>
+      <p>Longer pieces are on <a href="https://andalib.substack.com">Substack</a>.</p>
+    </div>
+    
+      <hr class="rule">
+      <section aria-labelledby="posts">
+        <h2 class="label" id="posts">Posts</h2>
+        <div class="entries compact">
+          <article class="entry">
+            <span class="meta">2026</span>
+            <h3 class="title-line"><a href="writing-sample-post.html">Can LLMs engage safely and supportively with spiritual experience?</a></h3>
+            <p class="body">A research agenda, what I don’t know yet, and a call for collaborators.</p>
+          </article>
+        </div>
+      </section>
+    
+  </main>
+  <footer class="page">
+    <hr>
+    <div class="foot"><a href="#">CV (PDF)</a><span class="sep" aria-hidden="true">·</span><a href="mailto:andalibmalit@gmail.com">andalibmalit@gmail.com</a><span class="sep" aria-hidden="true">·</span><a href="#">GitHub</a><span class="sep" aria-hidden="true">·</span><a href="#">LinkedIn</a></div>
+  </footer>
+</div>
+<script>
+(function(){var h=document.documentElement,b=document.getElementById('theme-switch');
+function apply(t){h.dataset.theme=t;b.textContent=t==='light'?'dark':'light';}
+try{apply(localStorage.getItem('theme')||'dark');}catch(e){apply('dark');}
+b.addEventListener('click',function(){var n=h.dataset.theme==='light'?'dark':'light';try{localStorage.setItem('theme',n);}catch(e){}apply(n);});})();
+</script>
+</body>
+</html>

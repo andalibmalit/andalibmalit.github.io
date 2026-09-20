@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark light">
+<title>Andalib Samandari</title>
+<link href="https://fonts.googleapis.com/css2?family=Rasa:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<a href="#main" style="position:absolute;left:-999px;top:0;background:var(--paper);padding:8px 12px;font-family:var(--mono);font-size:var(--small)" onfocus="this.style.left='12px'" onblur="this.style.left='-999px'">Skip to content</a>
+
+<div class="site">
+  <header class="page">
+    <nav class="nav" aria-label="Site"><a href="index.html" aria-current="page">andalib samandari</a><span class="sep" aria-hidden="true">·</span><a href="research.html">research</a><span class="sep" aria-hidden="true">·</span><a href="writing.html">writing</a><button type="button" class="switch" id="theme-switch">light</button></nav>
+    <div class="masthead">
+      <h1 class="title">Andalib Samandari</h1>
+    </div>
+    <img class="photo frontispiece" src="/images/me.jpg" alt="Andalib Samandari in a meadow below Mount Rainier" width="600" height="480">
+  </header>
+  <main class="page" id="main">
+    <div class="prose">
+      <p>I like putting real rigor behind things whose importance you can already feel, so the numbers sharpen that feeling but don’t replace it. In practice, that means two kinds of work.</p>
+      <p>At Georgia State’s <a href="https://arctic.gsu.edu/">ARCTIC</a> HPC center, I run AI infrastructure for researchers — building LLM-assisted cluster observability tools; helping scale up researchers’ experiments on our cluster; and leading workshops to democratize ML/AI and other computational methods.</p>
+      <p>My own research is wellbeing evaluation of frontier models: benchmark design, working out what to measure and why, LLM-judge validation. I co-architected and led research on <a href="https://humanebench.ai">HumaneBench</a>, an adversarial evaluation of prosocial behavior in 15 frontier models.</p>
+      <p>I’ve also kept a daily meditation practice for years. It shapes my interests in human flourishing, first-person methods, and how felt experience and formal frameworks can inform each other rather than be in tension.</p>
+      <p>A question I recently started asking: can LLMs safely and supportively facilitate first-person exploration of spirituality? As a starting point, I’m exploring whether anti-delusion training also suppresses engagement with reports of spiritual experience.</p>
+    </div>
+    <hr class="rule">
+    <section aria-labelledby="selected">
+      <h2 class="label" id="selected">Selected</h2>
+      <ul class="list">
+        <li><span class="meta">2026 · Proposal</span><a href="research.html#delusion">Delusion mitigation vs. spiritual engagement in LLMs</a></li>
+        <li><span class="meta">2025 · Published</span><a href="research.html#humanebench">HumaneBench: adversarial evaluation of prosocial behavior</a></li>
+        <li><span class="meta">2025 · In progress</span><a href="research.html#nibrs">Multiple imputation at HPC scale</a></li>
+      </ul>
+    </section>
+    <hr class="rule">
+    <section aria-labelledby="news">
+      <h2 class="label" id="news">News</h2>
+      <ul class="list">
+        <li><span class="meta">Tech Can’t Save Us (Literal Humans), S4 Ep43</span><a href="#">Scaling the Standards for Ethical AI</a></li>
+        <li><span class="meta">Built In</span><a href="#">Are Chatbots Acting in Our Best Interest? A New Benchmark Says Maybe Not.</a></li>
+        <li><span class="meta">TechCrunch</span><a href="#">A New AI Benchmark Tests Whether Chatbots Protect Human Wellbeing</a></li>
+        <li><span class="meta">Microsoft Research Blog</span><a href="https://www.microsoft.com/en-us/research/blog/ai-powered-microgrids-facilitate-energy-resilience-and-equity-in-regional-communities/">AI-Powered Microgrids Facilitate Energy Resilience and Equity in Regional Communities</a></li>
+      </ul>
+    </section>
+  </main>
+  <footer class="page">
+    <hr>
+    <div class="foot"><a href="#">CV (PDF)</a><span class="sep" aria-hidden="true">·</span><a href="mailto:andalibmalit@gmail.com">andalibmalit@gmail.com</a><span class="sep" aria-hidden="true">·</span><a href="#">GitHub</a><span class="sep" aria-hidden="true">·</span><a href="#">LinkedIn</a></div>
+  </footer>
+</div>
+<script>
+(function(){var h=document.documentElement,b=document.getElementById('theme-switch');
+function apply(t){h.dataset.theme=t;b.textContent=t==='light'?'dark':'light';}
+try{apply(localStorage.getItem('theme')||'dark');}catch(e){apply('dark');}
+b.addEventListener('click',function(){var n=h.dataset.theme==='light'?'dark':'light';try{localStorage.setItem('theme',n);}catch(e){}apply(n);});})();
+</script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark light">
+<title>Research · Andalib Samandari</title>
+<link href="https://fonts.googleapis.com/css2?family=Rasa:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<a href="#main" style="position:absolute;left:-999px;top:0;background:var(--paper);padding:8px 12px;font-family:var(--mono);font-size:var(--small)" onfocus="this.style.left='12px'" onblur="this.style.left='-999px'">Skip to content</a>
+
+<div class="site">
+  <header class="page">
+    <nav class="nav" aria-label="Site"><a href="index.html">andalib samandari</a><span class="sep" aria-hidden="true">·</span><a href="research.html" aria-current="page">research</a><span class="sep" aria-hidden="true">·</span><a href="writing.html">writing</a><button type="button" class="switch" id="theme-switch">light</button></nav>
+    <div class="masthead"><h1 class="title">Research</h1></div>
+  </header>
+  <main class="page" id="main">
+    <section aria-labelledby="selected">
+      <h2 class="label" id="selected">Selected</h2>
+      <div class="entries">
+        <article class="entry" id="delusion">
+          <span class="meta">2026 · Proposal</span>
+          <h3 class="title-line">Delusion mitigation vs. spiritual engagement in LLMs</h3>
+          <p class="body">Delusion-mitigation training teaches models to stop amplifying delusional spirals. Existing metrics score the presence of metaphysical themes, so they can’t tell a model that stopped amplifying from one that stopped discussing spirituality at all. I’m designing a benchmark that separates the two: matched pathological and non-pathological spiritual scenarios, judged on discernment and support rather than topic avoidance. If the suppression is real, it’s a miscalibrated guardrail rather than a safety win: people who can’t talk about their experience with the model don’t stop having it, they route around the model.</p>
+        </article>
+        <article class="entry" id="humanebench">
+          <span class="meta">2025 · Published</span>
+          <h3 class="title-line">HumaneBench: adversarial evaluation of prosocial behavior in frontier LLMs</h3>
+          <p class="body">HumaneBench evaluates robustness of prosocial behavior in large language models. We tested models from six labs across 788 validated scenarios spanning mental health, addiction, self-harm, and age-targeted contexts, and used persona prompt injection to test manipulability. We measured 67% manipulability into harmful advice with bootstrap confidence intervals, and established 96% human–LLM judge agreement to enable automated evaluation at scale. The rubric is grounded in care ethics applied to LLM behavior.</p>
+          <p class="link meta"><a href="https://humanebench.ai">Benchmark website</a></p>
+        </article>
+        <article class="entry" id="nibrs">
+          <span class="meta">2025 · In progress</span>
+          <h3 class="title-line">Multiple imputation at HPC scale: missing offender demographics in a decade of NIBRS</h3>
+          <p class="body">FBI incident data (NIBRS) records roughly 10–12 million incidents a year and often lacks the offender’s race, ethnicity, age, or drug involvement. Dropping incomplete records can bias any analysis built on the rest — including the ones meant to measure disparities in how policing and policy affect specific communities. For Dr. Danye Medhin’s criminal-justice study of exactly that question, I rebuilt a multiple-imputation procedure as a parallel Python pipeline: 50 imputed datasets, over a billion record-level operations, ~100 concurrent Slurm jobs, and under two days end to end instead of six-plus weeks on a workstation. The ~500 GB output ships to collaborators nationwide and underpins two papers in preparation.</p>
+          <p class="link meta"><a href="https://arctic.gsu.edu/2026/02/18/filling-the-gaps-in-criminal-justice-data/">Blog post</a></p>
+        </article>
+      </div>
+    </section>
+    <hr class="rule">
+    <section aria-labelledby="everything">
+      <h2 class="label" id="everything">Earlier work</h2>
+      <div class="entries compact">
+        <article class="entry" id="econometrics">
+          <span class="meta">2026 · Published</span>
+          <h3 class="title-line">Econometric pipelines at HPC scale: 323M-record labor-market analysis</h3>
+          <p class="body">Parallelized a DiD / event-study / triple-difference pipeline over ~323M job postings; 12+ hour Stata workflow to 1–2 hours across a 251-way Slurm array.</p>
+          <p class="link meta"><a href="https://doi.org/10.2139/ssrn.6537038">Paper</a></p>
+        </article>
+        <article class="entry">
+          <span class="meta">2024 · Published</span>
+          <h3 class="title-line">Causal inference on multimodal social-media data</h3>
+          <p class="body">PCMCI causal discovery on TikTok firearm-policy discourse vs. background-check data.</p>
+          <p class="link meta"><a href="https://drive.google.com/file/d/1sranoR9i2uNMhbYFWNHp4gEQ4H-Sw7RK/view">Poster</a></p>
+        </article>
+        <article class="entry">
+          <span class="meta">2023 · Published</span>
+          <h3 class="title-line">Agent-based modeling of firearm acquisition</h3>
+          <p class="body">NYC census tracts as a network; acquisition as contagion.</p>
+          <p class="link meta"><a href="https://drive.google.com/file/d/1jIeMOBEdA76G6PcgJdTYP_Fj8Nzmg3Nl/view">Poster</a></p>
+        </article>
+        <article class="entry">
+          <span class="meta">2022 · Published</span>
+          <h3 class="title-line">Reinforcement learning for autonomous energy-market trading (Microsoft Research)</h3>
+          <p class="body">DDPG agent for solar-microgrid management; cut predicted power costs by 50%.</p>
+          <p class="link meta"><a href="https://www.microsoft.com/en-us/research/blog/ai-powered-microgrids-facilitate-energy-resilience-and-equity-in-regional-communities/">Blog post</a><span class="sep" aria-hidden="true"> · </span><a href="https://drive.google.com/file/d/1gsuASH-uvSGmMIhlUZl4iiQPdnVaG4a2/view">Slides</a><span class="sep" aria-hidden="true"> · </span><a href="https://www.youtube.com/watch?v=cUR8pQZTYjw">Video</a></p>
+        </article>
+        <article class="entry">
+          <span class="meta">2022 · Published</span>
+          <h3 class="title-line">Predator–prey dynamics with a multi-species parasite (Georgia Tech REU)</h3>
+          <p class="body">Lotka–Volterra agent simulation with a parasite that degrades only prey fitness.</p>
+          <p class="link meta"><a href="https://drive.google.com/file/d/1VjGWaKdTxFQ3tNWp9ezh5Dl-tBjigA8M/view">Slides</a></p>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer class="page">
+    <hr>
+    <div class="foot"><a href="#">CV (PDF)</a><span class="sep" aria-hidden="true">·</span><a href="mailto:andalibmalit@gmail.com">andalibmalit@gmail.com</a><span class="sep" aria-hidden="true">·</span><a href="#">GitHub</a><span class="sep" aria-hidden="true">·</span><a href="#">LinkedIn</a></div>
+  </footer>
+</div>
+<script>
+(function(){var h=document.documentElement,b=document.getElementById('theme-switch');
+function apply(t){h.dataset.theme=t;b.textContent=t==='light'?'dark':'light';}
+try{apply(localStorage.getItem('theme')||'dark');}catch(e){apply('dark');}
+b.addEventListener('click',function(){var n=h.dataset.theme==='light'?'dark':'light';try{localStorage.setItem('theme',n);}catch(e){}apply(n);});})();
+</script>
+</body>
+</html>

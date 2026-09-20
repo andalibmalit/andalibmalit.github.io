@@ -8,6 +8,9 @@ hugo_stats.json
 # Local working files
 temp/
 
+# Design reference captures (kept locally for visual diffs)
+design/handoff/screenshots/
+
 # OS files
 .DS_Store
 Thumbs.db
