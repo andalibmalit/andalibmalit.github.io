@@ -1,6 +1,6 @@
 ---
 title: "Reinforcement learning for autonomous energy-market trading (Microsoft Research)"
-year: 2022
+year: 2023
 status: published
 tier: list
 weight: 1
