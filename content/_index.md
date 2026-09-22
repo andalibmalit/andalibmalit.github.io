@@ -1,6 +1,6 @@
 ---
 title: "Andalib Samandari"
-description: "I like putting real rigor behind things whose importance you can already feel, so the numbers sharpen that feeling but don’t replace it."
+description: "Andalib's home page"
 aliases: ["/resume/"]
 news:
   - { outlet: "Tech Can’t Save Us (Literal Humans), S4 Ep43", title: "Scaling the Standards for Ethical AI", url: "https://literalhumans.com/podcast/scaling-the-standards-for-ethical-ai-with-erika-anderson-and-andalib-samandari-founder-and-ai-researcher-of-building-humane-technology/" }
@@ -11,12 +11,12 @@ news:
 
 I like putting real rigor behind things whose importance you can already feel, so the numbers sharpen that feeling but don’t replace it. In practice, that means two kinds of work.
 
-At Georgia State’s [ARCTIC](https://arctic.gsu.edu/) HPC center, I run AI infrastructure for researchers — building LLM-assisted cluster observability tools; helping scale up researchers’ experiments on our cluster; and leading workshops to democratize ML/AI and other computational methods.
+At Georgia State’s [ARCTIC](https://arctic.gsu.edu/) HPC center, I run AI infrastructure for researchers — building LLM-assisted cluster observability tools, helping scale up researchers’ experiments on our cluster, and leading workshops to democratize ML/AI and other computational methods.
 
-My own research is wellbeing evaluation of frontier models: benchmark design, working out what to measure and why, LLM-judge validation. I co-architected and led research on [HumaneBench](https://humanebench.ai), an adversarial persona-based evaluation of whether 15 frontier models keep behaving humanely under pressure.
+My own research is wellbeing evaluation of frontier models: working out what to measure and why, and creating validated, scalable eval frameworks. I co-architected and led research on [HumaneBench](https://humanebench.ai), an adversarial persona-based evaluation of whether 15 frontier models keep behaving humanely under pressure.
 
 I’ve also kept a daily meditation practice for years. It shapes my interests in human & planetary flourishing, first-person methods, and how felt experience and formal frameworks can inform each other rather than be in tension.
 
-A question I recently started asking: can LLMs safely and supportively facilitate first-person exploration of spirituality? As a starting point, I’m exploring whether anti-delusion training also suppresses engagement with reports of spiritual experience.
+A question I recently started asking: can LLMs safely and supportively facilitate first-person exploration of spirituality? As a starting point, I’m exploring whether training to prevent delusion reinforcement inadvertently suppresses engagement with reports of spiritual experience.
 
 Feel free to reach me at my email or LinkedIn below.

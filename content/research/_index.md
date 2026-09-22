@@ -1,6 +1,6 @@
 ---
 title: Research
-description: "Selected and earlier research by Andalib Samandari: LLM wellbeing evaluation and research computing at HPC scale."
+description: "Selected research by Andalib Samandari"
 outputs: [html]
 cascade:
   - build:
