@@ -17,6 +17,6 @@ My own research is wellbeing evaluation of AI: working out what to measure and w
 
 I’ve also kept a daily meditation practice for years. It shapes my interests in human & planetary flourishing, first-person methods, and how felt experience and formal frameworks can inform each other rather than be in tension.
 
-A question I recently started asking: can LLMs safely and supportively facilitate first-person exploration of spirituality? As a starting point, I’m exploring whether training to prevent delusion reinforcement inadvertently suppresses engagement with reports of spiritual experience.
+A question I recently started asking: can AI safely and supportively facilitate first-person exploration of spirituality? As a starting point, I’m exploring whether training LLMs to avoid delusion reinforcement inadvertently suppresses engagement with reports of spiritual experience.
 
 Feel free to reach me at my email or LinkedIn below.
