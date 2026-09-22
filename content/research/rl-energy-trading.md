@@ -4,7 +4,7 @@ year: 2023
 status: published
 tier: list
 weight: 1
-summary: "DDPG agent for solar-microgrid management; cut predicted power costs by 50%."
+summary: "DDPG agent for autonomous battery management and energy market arbitrage, using solar; cut predicted power costs by 50%."
 links:
   - { label: "Blog post", url: "https://www.microsoft.com/en-us/research/blog/ai-powered-microgrids-facilitate-energy-resilience-and-equity-in-regional-communities/" }
   - { label: "Slides", url: "https://github.com/andalibmalit/microgrid-msft/blob/main/microgrid-control.pdf" }
