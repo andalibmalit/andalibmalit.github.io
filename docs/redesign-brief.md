@@ -44,7 +44,7 @@ Three pages and a footer. The blog stays on Substack.
 | Writing | At launch: no Writing page; the nav item links to Substack. Later: the page is enabled with the research-agenda post (why), and the public proposal doc (how) is linked from the Research entry | Hosts long-form pieces that should outlive a newsletter issue |
 | Footer (every page) | CV, email, GitHub, LinkedIn | CV is a generic version, updated twice a year |
 
-Nav is one lowercase line: andalib samandari · research · writing, with the light/dark switch at the right end. The name is the home link. No icons.
+Nav is one lowercase line: home · research · writing, with the light/dark switch at the right end. No icons.
 
 Content to fix while migrating: the homepage says HumaneBench was adopted by Chief.bot, the research page says Storytell.ai; pick the current one. Drop "Andalib's face circa 2023" as alt text and use a recent photo, or no photo.
 

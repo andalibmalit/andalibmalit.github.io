@@ -27,7 +27,7 @@ home = ["html"]   # sections keep the default HTML+RSS so Writing gets a feed wh
     target = "assets/images"
 
 [[menu.main]]
-  name = "andalib samandari"
+  name = "home"
   url = "/"
   weight = 1
 [[menu.main]]

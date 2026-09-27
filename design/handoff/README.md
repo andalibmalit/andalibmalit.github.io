@@ -51,7 +51,7 @@ Tweakable knobs (expose as Hugo params if useful): `--measure`, `--body`, `--sp`
 - Hairlines (`<hr class="rule">`) only between major sections and above the footer. No borders, boxes, shadows, icons, badges, gradients, rounded containers, or animation.
 
 ## Shared parts
-**Nav** (`.nav`, every page): one line in mono, lowercase: `andalib samandari · research · writing`, with the theme switch ("light"/"dark") flush right on the same line. Links are muted, no underline; current page gets `aria-current="page"` and renders in ink. Separators are `<span class="sep" aria-hidden="true">·</span>`.
+**Nav** (`.nav`, every page): one line in mono, lowercase: `home · research · writing`, with the theme switch ("light"/"dark") flush right on the same line. Links are muted, no underline; current page gets `aria-current="page"` and renders in ink. Separators are `<span class="sep" aria-hidden="true">·</span>`.
 
 **Footer** (`footer.page`, every page): hairline, then one mono line: `CV · andalibmalit@gmail.com · GitHub · LinkedIn`. Muted, underlined. No copyright line. URLs for CV/GitHub/LinkedIn are still `#` in the reference.
 
@@ -123,7 +123,7 @@ Before any of these changes, the built Home, Research, and Writing pages matched
 - **Fluid body size, wider measure.** `--body` is `clamp(1.1875rem, 0.95rem + 0.45vw, 1.375rem)` (19px on phones to 22px on wide screens) and `--measure` is `66ch`, both set from `config.toml`. Reason: use more of a desktop screen without longer lines. The column is measured in `ch`, so it widens with the type and line length holds near 78 characters.
 - **Hanging section labels.** From 1100px up, `h2.label` (SELECTED, NEWS, EARLIER WORK, POSTS) sits in the left margin, right-aligned, level with the first `.meta` line of its section, at weight 400 rather than 500. Below 1100px the labels stack above their lists as designed. Reason: marginalia use the wide margin without touching the text column; in the margin the position does the heading's work, so the label can be quieter.
 - **Header band on Research.** At every width, a page whose `main` opens with a labelled section gets a hairline under the title, with the same spacing as `.rule`. Reason: a hung label 36px under the `h1` competed with it; now every label sits beneath a rule, as on Home, and phone and desktop agree.
-- **Narrow nav.** The switch label is long (see Copy), so at 600px and below it takes its own right-aligned line under the nav (`flex-basis: 100%`, a `--s1` gap above) rather than wrapping where it happens to fall. At 350px and below, `.nav` tightens to `gap: 0 6px; font-size: 0.72rem` so `andalib samandari · research · writing` never breaks across rows. The handoff nav needs about 342px on one line and was only checked at 390px.
+- **Narrow nav.** The switch label is long (see Copy), so at 600px and below it takes its own right-aligned line under the nav (`flex-basis: 100%`, a `--s1` gap above) rather than wrapping where it happens to fall. At 350px and below, `.nav` tightens to `gap: 0 6px; font-size: 0.72rem` so `home · research · writing` never breaks across rows. With the earlier `andalib samandari` label the handoff nav needed about 342px on one line; it was only checked at 390px.
 
 ### Type
 - **Entry titles and post headings are Rasa 600**, not 500. Reason: 500 read too close to the 400 body text, especially light-on-dark. The 500 font files were swapped for 600, so the payload is unchanged. The mono 500 labels are unchanged.
