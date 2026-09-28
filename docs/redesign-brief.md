@@ -125,6 +125,8 @@ Reference sites to open before prompting: [Practical Typography](https://practic
 
 ## Claude Design prompt
 
+This is the original prompt, kept as sent. The built site has since moved away from several of its rules; `design/handoff/README.md` describes the site as built.
+
 Paste this as the first message. Attach the bio draft above and 2–3 research entries as real content, since placeholder text makes the type decisions wrong.
 
 ```markdown
